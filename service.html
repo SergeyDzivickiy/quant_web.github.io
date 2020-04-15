@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA_compatible"content ="ei=edge">
+
+	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+	<script type="text/javascript" src="js/handler.js" defer></script>
+	<script type="text/javascript" src="js/service-handle.js" defer=""></script>
+	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Quant DVR</title>
+
+</head>
+
+<body>
+	<header class="header clearfix">
+		<button type="button" id="toggleMenu" class="toggle_menu">
+			<i class="fa fa-bars"></i>
+		</button>
+		<div class="wrapper-simple-desc">
+			<div>
+				<h1 class="content_serv" key="header">Service</h1>
+			</div>
+			<div>
+				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
+				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+			</div>
+			<div id="battery_control">
+				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
+			</div>
+		</div>
+	</header>
+
+
+		<div class="main">
+		<div class="padding-container">
+
+		<div class="service-container">
+
+			<div>
+				<p class="content_serv" key="card">SD Card:</p>
+			</div>
+			<div>
+				<p id= "sd_card">Inserted</p>
+			</div>
+		</div>
+		<div class="service-container">
+
+			<div>
+				<p class="content_serv" key="int_mem">Internal memory:</p>
+			</div>
+			<div>
+				<p id= "internal_memory">Not Inserted</p>
+			</div>
+		</div>
+
+		<div class="service-container">
+
+			<div>
+				<p class="content_serv" key="date">Current date:</p>
+			</div>
+			<div>
+				<p id="date"></p>
+			</div>
+		</div>
+
+		<div class="service-container">
+
+			<div>
+				<p class="content_serv" key="dev_date">Device date:</p>
+			</div>
+			<div>
+				<p id="device-data">0/0/0000 00:00:00</p>
+			</div>
+		</div>
+
+		<div class="sync_time_button">
+			<div class="apply">
+				<button id="sync_butt" class="btn-sync" type="submit">Sync <i class="fa fa-refresh" aria-hidden="true"></i></button>
+			</div>
+		</div>
+
+<div class="service-container">
+
+	<div>
+		<p class="content_serv" key="update">Update Firmware:</p>
+	</div>
+	<div>
+
+		<form id ="firmware" name="firmware" enctype="multipart/form-data">
+			<input type="file" accept=".bin" name="firm_file" id="file_update"class="custom-file-input">
+			<button class="content_serv btn-update" id="upd_firm" type="submit" value="Update device">Update <i class="fa fa-spinner" aria-hidden="true"></i></button>
+			
+		</form> 
+	</div>
+</div>
+
+		<div class="service-container">
+
+			<div>
+				<p class="content_serv" key="oled">Oled Display Workmode:</p>
+			</div>
+			<div>
+				<select name="oled-sel">
+					<option class="content_serv" key="alw" value="always">Always</option>
+					<option class="content_serv" key="5min" value="5-min">5 Min</option>
+					<option class="content_serv" key="10min" value="10-min">10 Min</option>
+				</select>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="device-info">
+			<div>
+				<p id="info_device">
+					Firmware version: v1.0.0 (debug)<br>
+					Hardware version: v1.0.0<br>
+					Serial number: 69 B0 0B<br>
+					MAC Address: AA:BB:CC:DD:EE:FF<br>
+				</p>
+			</div>
+			<div>
+			</div>
+		</div>
+		<div class="sync_button">
+			<div></div>
+			<div></div>
+			<div class="apply">
+
+				<button id="reboot" class="content_serv btn-service" key="reboot" type="submit" >Reboot device <i class="fa fa-retweet" aria-hidden="true"></i></button>
+
+				<button id="reset" class="content_serv btn-service" key="res" type="submit" >Reset settings <i class="fa fa-eraser" aria-hidden="true"></i> </button>
+			</div>
+		</div>
+
+<nav class="vertical_nav">
+		<ul id="js-menu" class="menu">
+			<h2>Quant DVR</h2>
+			<hr>
+			<li class="menu--item">
+				<a href="index.html" class="menu--link" title="Main">
+
+					<span class="menu--label" key="main">Main</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="record.html" class="menu--link" title="Record">
+
+					<span class="menu--label" key="record">Record Settings</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="osd.html" class="menu--link" title="OSD">
+
+					<span class="menu--label" key="osd">OSD</span>
+				</a>
+			</li>
+
+<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label">Network Settings</span>
+				</label>
+
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="wlan.html" class="sub_menu--link">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link">Security</a>
+					</li>	
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link">VPN</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu--item">
+				<a href="storage.html" class="menu--link" title="Storage">
+
+					<span class="menu--label" key="stor">Storage</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="rtsp_stream.html" class="menu--link" title="Stream">
+
+					<span class="menu--label" key="rtsp">RTSP Stream</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+					<span class="menu--label" key="shed">Sheduler</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="customize.html" class="menu--link" title="Service">
+
+					<span class="menu--label" key="cust">Customize</span>
+				</a>
+			</li>
+
+			<li class="menu--item active">
+				<a href="service.html" class="menu--link" title="Device Info">
+
+					<span class="menu--label" key="serv">Service</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_int.html" class="menu--link" title="Download Files">
+
+					<span class="menu--label" key="dow_int">Download Files INT</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_ext.html" class="menu--link" title="Online Stream">
+
+					<span class="menu--label" key="dow_ext">Download Files EXT</span>
+				</a>
+			</li>
+			<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+					<span class="menu--label" key="cofdm">COFDM settings</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+<!-- 
+ <button id="collapse_menu" class="collapse_menu">
+      <i class="collapse_menu--icon  fa fa-fw"></i>
+ </button>
+-->
+
+</body>
+</html>

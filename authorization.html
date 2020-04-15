@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style_auto.css">
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+	<title>Quant Autorization</title>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<form class= "form-signin" action="" name="form-signin" >    
+			<h2 class="form-signin-heading">Log in</h2>
+
+			<input type="text" class="form-control" name="username" placeholder="Enter Login" required="" autofocus="" />
+
+			<input type="password" class="form-control" name="password" placeholder="Enter Password" required=""/>    
+
+			<button class="btn-control" type="submit">Log In</button>
+		</form>
+		<div id="status">
+
+		</div>
+	</div>
+
+
+	<script>
+		window.onload = function() {
+			var socket = new WebSocket("wss://echo.websocket.org");
+			var status = document.querySelector("#status");
+			console.log(socket);
+
+			socket.onopen = function(event){
+				status.innerHTML = "Connected";
+			};
+
+			socket.onclose = function(event){
+
+				if(event.wasClean){
+					status.innerHTML = "Connection close";
+				}else{
+					status.innerHTML = "Connection close with error: "+event.code; + "Reason :" + event.reason;
+				};
+			};
+			socket.onmessage = function(event){
+				var message = JSON.parse(event.data);
+				status.innerHTML = "Data from Server: " + "<br>" + "Login:" +message.username + "<br>" + "Password:" + message.password + "<br>" + "MD5-hash: " + message.key; 
+			};
+
+			socket.onerror = function(event){
+				status.innerHTML = "Error" + event.error;
+			};
+
+			document.forms["form-signin"].onsubmit = function(){
+				var result_message = MD5(this.username.value+this.password.value);
+
+				var message = {
+					username: this.username.value,
+					password: this.password.value,
+					key: result_message
+				}
+				socket.send(JSON.stringify(message));
+				return false;
+			}
+
+		}
+	</script>
+
+</body>
+</html>

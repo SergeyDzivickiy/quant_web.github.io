@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA_compatible"content ="ei=edge">
+
+	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+	<script type="text/javascript" src="js/osd-handler.js" defer=""></script>
+	<script type="text/javascript" src="js/handler.js" defer></script>
+	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Quant DVR</title>
+
+</head>
+
+<body>
+	<header class="header clearfix">
+		<button type="button" id="toggleMenu" class="toggle_menu">
+			<i class="fa fa-bars"></i>
+		</button>
+		<div class="wrapper-simple-desc">
+			<div>
+				<h1 class="content_osd" key="header">OSD Settings</h1>
+			</div>
+			<div>
+				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
+				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+			</div>
+			<div id="battery_control">
+				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
+			</div>
+		</div>
+
+	</header>
+<!-- 
+ <button id="collapse_menu" class="collapse_menu">
+      <i class="collapse_menu--icon  fa fa-fw"></i>
+ </button>
+-->
+
+<div class="main" id="main">
+	<br>
+	<div class="container-osd" id="container-osd">		
+		<div id="left-top" >
+			<p id="osd-camera"> CAM-1</p>
+			<p id="osd-time">01/01/2019 15:16:34</p>
+			<p id="osd-battery">BAT</p>
+		</div>
+		<div id="right-top">
+
+		</div>
+
+		<div id="left-bottom">
+
+		</div>
+		<div id="right-bottom">
+
+		</div>
+
+	</div>
+
+
+
+			<br>
+	<div class="container">
+		<div>
+		<center><p class="content_osd" key="alpha">OSD Alpha:</p></center>
+		</div> 
+		<div>
+			<input type="range" min="0" max="255" value="255" class="slider" id="Range_alpha">
+			<p>Alpha:<span id="alpha_value"></span>%</p>
+		</div>
+	</div>
+
+	<div class="osd-controlers">
+		<div>
+			<p class="content_osd" key="cam">Camera:</p>
+						<label class="switch">
+				<input type="checkbox" id="camera" checked>
+				<span></span> 
+			</label>
+		</div>
+
+		<div>
+		<p class="content_osd" key="time">Time:</p>
+			<label class="switch">
+				<input type="checkbox" id="time" checked>
+				<span></span> 
+			</label>
+
+		</div>
+		<div>
+	<p class="content_osd" key="battery">
+				Battery:
+			</p>
+				<label class="switch">
+				<input type="checkbox" id="battery" checked>
+				<span></span> 
+			</label>
+		</div>
+	</div>
+
+	<div class="osd-controlers">
+
+		<div>
+			<select name="camera-sel" id="camera-sel">
+				<option class="content_osd" key="LT" value="Left-Top" selected>Left-Top</option>
+				<option class="content_osd" key="RT" value="Right-Top">Right-Top</option>
+				<option class="content_osd" key="LB" value="Left-Bottom">Left-Bottom</option>
+				<option class="content_osd" key="RB" value="Right-Bottom">Right-Bottom</option>
+		</select>
+		</div>
+
+		<div>
+			<select name="time-sel" id="time-sel">
+				<option class="content_osd" key="LT" value="Left-Top" selected>Left-Top</option>
+				<option class="content_osd" key="RT" value="Right-Top">Right-Top</option>
+				<option class="content_osd" key="LB" value="Left-Bottom">Left-Bottom</option>
+				<option class="content_osd" key="RB" value="Right-Bottom">Right-Bottom</option>
+			</select>
+		</div>
+		<div>
+			<select name="camera-sel" id="battery-sel">
+				<option class="content_osd" key="LT" value="Left-Top" selected>Left-Top</option>
+				<option class="content_osd" key="RT" value="Right-Top">Right-Top</option>
+				<option class="content_osd" key="LB" value="Left-Bottom">Left-Bottom</option>
+				<option class="content_osd" key="RB" value="Right-Bottom">Right-Bottom</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div></div>
+		<div></div>
+		<div class="apply">
+			<button id="osd_apply" class="btn-control" type="submit">Apply</button>
+		</div>
+	</div>
+</div>
+
+
+	<nav class="vertical_nav">
+		<ul id="js-menu" class="menu">
+			<h2>Quant DVR</h2>
+			<hr>
+			<li class="menu--item">
+				<a href="index.html" class="menu--link" title="Main">
+
+					<span class="menu--label" key="main">Main</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="record.html" class="menu--link" title="Record">
+
+					<span class="menu--label" key="record">Record Settings</span>
+				</a>
+			</li>
+
+			<li class="menu--item active">
+				<a href="osd.html" class="menu--link" title="OSD">
+
+					<span class="menu--label" key="osd">OSD</span>
+				</a>
+			</li>
+
+			<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label">Network Settings</span>
+				</label>
+
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="wlan.html" class="sub_menu--link">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link">Security</a>
+					</li>	
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link">VPN</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu--item">
+				<a href="storage.html" class="menu--link" title="Storage">
+
+					<span class="menu--label" key="stor">Storage</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="rtsp_stream.html" class="menu--link" title="Stream">
+
+					<span class="menu--label" key="rtsp">RTSP Stream</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+					<span class="menu--label" key="shed">Sheduler</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="customize.html" class="menu--link" title="Service">
+
+					<span class="menu--label" key="cust">Customize</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="service.html" class="menu--link" title="Device Info">
+
+					<span class="menu--label" key="serv">Service</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_int.html" class="menu--link" title="Download Files">
+
+					<span class="menu--label" key="dow_int">Download Files INT</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_ext.html" class="menu--link" title="Online Stream">
+
+					<span class="menu--label" key="dow_ext">Download Files EXT</span>
+				</a>
+			</li>
+			<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+					<span class="menu--label" key="cofdm">COFDM settings</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

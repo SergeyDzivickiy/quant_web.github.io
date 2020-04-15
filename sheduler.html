@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA_compatible"content ="ei=edge">
+
+	
+	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+	<script type="text/javascript" src="js/sheduler_handler.js" defer></script>
+	<script type="text/javascript" src="js/handler.js" defer></script>
+	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Quant DVR</title>
+
+</head>
+
+<body>
+	<header class="header clearfix">
+		<button type="button" id="toggleMenu" class="toggle_menu">
+			<i class="fa fa-bars"></i>
+		</button>
+		<div class="wrapper-simple-desc">
+			<div>
+				<h1 class="content_shed" key="header">Sheduler</h1>
+			</div>
+			<div>
+				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
+				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+			</div>
+			<div id="battery_control">
+				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
+			</div>
+		</div>
+	</header>
+
+<div class="main">
+<br>
+		<div class="sheduler-container">
+
+			<div>
+				<p class="content_shed" key="del_start">Delayed Start:</p>
+			</div>
+			<div>
+				<input type="date" id="date" name="date"/>
+			</div>
+
+			<div id="toggles">
+				<label class="switch">
+					<input type="checkbox" id="delayed_start">
+					<span></span> 
+				</label>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="mon" id="day">Monday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-0">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-monday"><i id="ms" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-monday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-monday" style="display: none;">
+
+					<input id="time_zone0_from_monday" type="time" name="time-zone1-from-monday" value="00:00">
+
+					<input id="time_zone0_to_monday" type="time" name="time-zone1-to-monday" value="00:00">
+
+					<input id="time_zone1_from_monday" type="time" name="time-zone2-from-monday" value="00:00">
+
+					<input id="time_zone1_to_monday" type="time" name="time-zone2-to-monday" value="00:00">
+
+					<input id="time_zone2_from_monday" type="time" name="time-zone3-from-monday" value="00:00">
+
+					<input id="time_zone2_to_monday" type="time" name="time-zone3-to-monday" value="00:00">
+
+					<input id="time_zone3_from_monday" type="time" name="time-zone4-from-monday" value="00:00">
+
+					<input id="time_zone3_to_monday" type="time" name="time-zone4-to-monday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="thue" id="day">Thuesday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-1">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-thuesday"><i id="thues" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-thuesday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-thuesday" style="display: none;">
+
+					<input id="time_zone0_from_thuesday" type="time" name="time-zone1-from-thuesday" value="00:00">
+
+					<input id="time_zone0_to_thuesday" type="time" name="time-zone1-to-thuesday" value="00:00">
+
+					<input id="time_zone1_from_thuesday" type="time" name="time-zone2-from-thuesday" value="00:00">
+
+					<input id="time_zone1_to_thuesday" type="time" name="time-zone2-to-thuesday" value="00:00">
+
+					<input id="time_zone2_from_thuesday" type="time" name="time-zone3-from-thuesday" value="00:00">
+
+					<input id="time_zone2_to_thuesday" type="time" name="time-zone3-to-thuesday" value="00:00">
+
+					<input id="time_zone3_from_thuesday" type="time" name="time-zone4-from-thuesday" value="00:00">
+
+					<input id="time_zone3_to_thuesday" type="time" name="time-zone4-to-thuesday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+
+				<div class="included-sheduler">
+					<h2 id="day" class="content_shed" key="wed">Wednesday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-2">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-wednesday"><i id="ws" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-wednesday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-wednesday" style="display: none;">
+
+					<input id="time_zone0_from_wednesday" type="time" name="time-zone1-from-wednesday" value="00:00">
+
+					<input id="time_zone0_to_wednesday" type="time" name="time-zone1-to-wednesday" value="00:00">
+
+					<input id="time_zone1_from_wednesday" type="time" name="time-zone2-from-wednesday" value="00:00">
+
+					<input id="time_zone1_to_wednesday" type="time" name="time-zone2-to-wednesday" value="00:00">
+
+					<input id="time_zone2_from_wednesday" type="time" name="time-zone3-from-wednesday" value="00:00">
+
+					<input id="time_zone2_to_wednesday" type="time" name="time-zone3-to-wednesday" value="00:00">
+
+					<input id="time_zone3_from_wednesday" type="time" name="time-zone4-from-wednesday" value="00:00">
+
+					<input id="time_zone3_to_wednesday" type="time" name="time-zone4-to-wednesday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="thur" id="day">Thursday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-3">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-thursday"><i id="thurs" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-thursday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-thursday" style="display: none;">
+
+					<input id="time_zone0_from_thursday" type="time" name="time-zone1-from-thursday" value="00:00">
+
+					<input id="time_zone0_to_thursday" type="time" name="time-zone1-to-thursday" value="00:00">
+
+					<input id="time_zone1_from_thursday" type="time" name="time-zone2-from-thursday" value="00:00">
+
+					<input id="time_zone1_to_thursday" type="time" name="time-zone2-to-thursday" value="00:00">
+
+					<input id="time_zone2_from_thursday" type="time" name="time-zone3-from-thursday" value="00:00">
+
+					<input id="time_zone2_to_thursday" type="time" name="time-zone3-to-thursday" value="00:00">
+
+					<input id="time_zone3_from_thursday" type="time" name="time-zone4-from-thursday" value="00:00">
+
+					<input id="time_zone3_to_thursday" type="time" name="time-zone4-to-thursday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>		
+
+		<div class="sheduler" >
+			<div class="storage">
+
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="fri" id="day">Friday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-4">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-friday"><i id="fs" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-friday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-friday" style="display: none;">
+
+					<input id="time_zone0_from_friday" type="time" name="time-zone1-from-friday" value="00:00">
+
+					<input id="time_zone0_to_friday" type="time" name="time-zone1-to-friday" value="00:00">
+
+					<input id="time_zone1_from_friday" type="time" name="time-zone2-from-friday" value="00:00">
+
+					<input id="time_zone1_to_friday" type="time" name="time-zone2-to-friday" value="00:00">
+
+					<input id="time_zone2_from_friday" type="time" name="time-zone3-from-friday" value="00:00">
+
+					<input id="time_zone2_to_friday" type="time" name="time-zone3-to-friday" value="00:00">
+
+					<input id="time_zone3_from_friday" type="time" name="time-zone4-from-friday" value="00:00">
+
+					<input id="time_zone3_to_friday" type="time" name="time-zone4-to-friday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="sat" id="day">Saturday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-5">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-saturday"><i id="sats" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-saturday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-saturday" style="display: none;">
+
+					<input id="time_zone0_from_saturday" type="time" name="time-zone1-from-saturday" value="00:00">
+
+					<input id="time_zone0_to_saturday" type="time" name="time-zone1-to-saturday" value="00:00">
+
+					<input id="time_zone1_from_saturday" type="time" name="time-zone2-from-saturday" value="00:00">
+
+					<input id="time_zone1_to_saturday" type="time" name="time-zone2-to-saturday" value="00:00">
+
+					<input id="time_zone2_from_saturday" type="time" name="time-zone3-from-saturday" value="00:00">
+
+					<input id="time_zone2_to_saturday" type="time" name="time-zone3-to-saturday" value="00:00">
+
+					<input id="time_zone3_from_saturday" type="time" name="time-zone4-from-saturday" value="00:00">
+
+					<input id="time_zone3_to_saturday" type="time" name="time-zone4-to-saturday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div class="sheduler" >
+			<div class="storage">
+				<div class="included-sheduler">
+					<h2 class="content_shed" key="sun" id="day">Sunday</h2>
+					<div>
+						<div id="toggles">
+							<label class="switch">
+								<input type="checkbox" id="sheduler-6">
+								<span></span> 
+							</label>
+						</div>
+					</div>
+					<div>
+						<button type="button" class="plus" id="plus-sunday"><i id="suns" class="fa fa-arrow-circle-down"></i></button>
+					</div>
+				</div>
+				<br>
+				<div class="included-sheduler" id="included-sheduler-sunday" style="display: none;">
+					<h2 class="content_shed" key="from">From</h2>
+					<div>
+						<h2 class="content_shed" key="to">To</h2>	
+					</div>
+				</div>
+				<hr>
+				<div class="included-sheduler-date" id="included-sheduler-date-sunday" style="display: none;">
+
+					<input id="time_zone0_from_sunday" type="time" name="time-zone1-from-sunday" value="00:00">
+
+					<input id="time_zone0_to_sunday" type="time" name="time-zone1-to-sunday" value="00:00">
+
+					<input id="time_zone1_from_sunday" type="time" name="time-zone2-from-sunday" value="00:00">
+
+					<input id="time_zone1_to_sunday" type="time" name="time-zone2-to-sunday" value="00:00">
+
+					<input id="time_zone2_from_sunday" type="time" name="time-zone3-from-sunday" value="00:00">
+
+					<input id="time_zone2_to_sunday" type="time" name="time-zone3-to-sunday" value="00:00">
+
+					<input id="time_zone3_from_sunday" type="time" name="time-zone4-from-sunday" value="00:00">
+
+					<input id="time_zone3_to_sunday" type="time" name="time-zone4-to-sunday" value="00:00">
+					<br>	
+				</div>
+			</div>
+		</div>
+
+		<div id="status" style="padding-left: 500px;">
+			
+		</div>
+
+		<div id="test" style="padding-left: 500px;">
+			
+		</div>		
+
+		<div class="footer">
+			<div></div>
+			<div></div>
+			<div class="apply">
+				<button class="btn-control" type="submit">Apply</button>
+			</div>
+		</div>
+</div>
+<nav class="vertical_nav">
+		<ul id="js-menu" class="menu">
+			<h2>Quant DVR</h2>
+			<hr>
+			<li class="menu--item">
+				<a href="index.html" class="menu--link" title="Main">
+
+					<span class="menu--label" key="main">Main</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="record.html" class="menu--link" title="Record">
+
+					<span class="menu--label" key="record">Record Settings</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="osd.html" class="menu--link" title="OSD">
+
+					<span class="menu--label" key="osd">OSD</span>
+				</a>
+			</li>
+
+<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label">Network Settings</span>
+				</label>
+
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="wlan.html" class="sub_menu--link">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link">Security</a>
+					</li>	
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link">VPN</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu--item">
+				<a href="storage.html" class="menu--link" title="Storage">
+
+					<span class="menu--label" key="stor">Storage</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="rtsp_stream.html" class="menu--link" title="Stream">
+
+					<span class="menu--label" key="rtsp">RTSP Stream</span>
+				</a>
+			</li>
+
+			<li class="menu--item active">
+				<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+					<span class="menu--label" key="shed">Sheduler</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="customize.html" class="menu--link" title="Service">
+
+					<span class="menu--label" key="cust">Customize</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="service.html" class="menu--link" title="Device Info">
+
+					<span class="menu--label" key="serv">Service</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_int.html" class="menu--link" title="Download Files">
+
+					<span class="menu--label" key="dow_int">Download Files INT</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_ext.html" class="menu--link" title="Online Stream">
+
+					<span class="menu--label" key="dow_ext">Download Files EXT</span>
+				</a>
+			</li>
+			<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+					<span class="menu--label" key="cofdm">COFDM settings</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+		<script>
+//			window.onload = function() {
+
+
+		/*
+		HI_U8 timezone_byte;
+		HI_U8 timezone_start_date[3];
+		HI_U8 timezone_shedule[7][4][2][2];// timezone_shedule[7(weekday)][4(count)][2(start,end)][2(hour,min)]
+	
+			var zone_sheduler = new Array(day);
+			var day = new Array (time_zone, st_end, time);
+			var time_zone = new Array (st_end, time);
+			var st_end = new Array (time);
+			var time = new Array ();
+
+			for (var i = 0; i >= 7; i++) {
+					
+				for (var j = 0; i >= 4; j++) {
+
+					for (var n = 0; n >= 2; n++) {
+
+						for (var m = 0; m >= 2; m++) {
+
+						}
+					}	
+				}
+			}
+
+//			console.log(zone_sheduler);
+*/
+		// var sheduler=1, day=7, zones=4, st_end=2, hr_min=2;
+
+		// 		var arr = new Array(sheduler);
+
+		// 		for (var i = 0; i < sheduler; i++) {
+		// 			arr[i] = new Array(day);
+
+		// 			for (var j = 0; j < day; j++) {
+		// 				arr[i][j] = new Array(zones);
+
+		// 				for (var n = 0; n < zones; n++) {
+		// 					arr[i][j][n] = new Array(st_end);
+
+		// 					for (var m = 0; m < st_end; m++){
+		// 						arr[i][j][n][m] = new Array(hr_min);
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+
+		// 		for (var i = 0 ; i < sheduler; i++){
+		// 			for ( j = 0; j < day; j++){
+		// 				for ( n = 0; n <zones; n++) {
+		// 					for (m = 0; m<st_end; m++) {
+		// 						for (c = 0; c<hr_min; c++){
+		// 						arr[i][j][n][m][c] = 0;
+		// 						}
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+
+
+
+// 		var day=7, zones=4, st_end=2, hr_min=2;
+// 		var arr = new Array(day);
+
+// 		for (var i = 0; i < day; i++) {
+// 			arr[i] = new Array(zones);
+// 			for (var j = 0; j < zones; j++) {
+// 				arr[i][j] = new Array(st_end);
+// 				for (var n = 0; n < hr_min; n++) {
+// 					arr[i][j][n] = new Array(hr_min);
+// 				}
+// 			}
+// 		}
+
+// 		for (var i = 0 ; i < day; i++){
+
+// 			for ( j = 0; j < zones; j++){
+// 				for ( n = 0; n <st_end; n++) {
+// 					for (m = 0; m<hr_min; m++) {
+// 						arr[i][j][n][m] = 0;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		console.log(arr);
+// var socket = new WebSocket("wss://echo.websocket.org");
+// var status = document.querySelector("#status");
+// console.log(socket);
+
+// socket.onopen = function(event){
+// 	status.innerHTML = "Connected";
+// };
+
+// socket.onclose = function(event){
+
+// 	if(event.wasClean){
+// 		status.innerHTML = "Connection close";
+// 	}else{
+// 		status.innerHTML = "Connection close with error: "+event.code; + "Reason :" + event.reason;
+// 	};
+// };
+// socket.onmessage = function(event){
+// 	var message = JSON.parse(event.data);
+// 	status.innerHTML = "Data from Server: " + "<br>" + "delayed_start:" +message.delayed_start + "<br>" + "date:" + message.date+ "<br>" + "monday:" + message.monday+ "<br>" + "monday-tz1-from:" + message.tz_1_mon; 
+// };
+
+// socket.onerror = function(event){
+// 	status.innerHTML = "Error" + event.error;
+// };
+// //HI_U8 timezone_shedule[7][4][2][2];// timezone_shedule[7(weekday)][4(count)][2(start,end)][2(hour,min)]
+
+// function parse_time_hours(object){
+// 	return object.slice(0, 2);	
+// }
+// function parse_time_minutes(object){
+// 	return object.slice(3, 5);	
+// }
+
+
+// document.forms["sheduler"].onsubmit = function(){
+// //Parse Buttons
+// var time_zone = new Uint8Array(1);
+// var tz_1_mon= document.getElementById("time_zone0_from_monday").value;
+// time_zone[0] |= +$("#delayed_start").is(":checked");
+// for (var i = 0; i <=6; i++) {
+// 	time_zone[0] |= +$("#sheduler-"+[i]).is(":checked")<<i+1;
+// }
+
+// 			console.log((time_zone[0]).toString(2));
+// //Parse Buttons
+
+
+// //Parse Time Zones
+// var n = 4, m = 4;
+// var zone_mon = [], zone_thue = [], zone_wed = [],zone_thur = [], zone_fri = [],zone_sat = [], zone_sun = [];
+
+// for (var i = 0; i < m; i++){
+// 	zone_mon[i]  = [];
+// 	zone_thue[i] = [];
+// 	zone_wed[i]  = [];
+// 	zone_thur[i] =	[];
+// 	zone_fri[i]  = [];
+// 	zone_sat[i]  = [];
+// 	zone_sun[i]  = [];
+
+// 	for (var j = 0; j < n; j++){
+// 		zone_mon[i][j] = 0;
+// 		zone_thue[i][j] = 0;
+// 		zone_wed[i][j] = 0;
+// 		zone_thur[i][j] = 0;
+// 		zone_fri[i][j] = 0;
+// 		zone_sat[i][j] = 0;
+// 		zone_sun[i][j] = 0;
+// 	}
+// }
+// for (var i = 0; i < 4; i++){
+
+// 	zone_mon[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_monday").value);
+// 	zone_mon[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_monday").value);
+// 	zone_mon[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_monday").value);
+// 	zone_mon[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_monday").value);
+
+// 	zone_thue[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_thuesday").value);
+// 	zone_thue[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_thuesday").value);
+// 	zone_thue[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_thuesday").value);
+// 	zone_thue[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_thuesday").value);
+
+// 	zone_wed[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_wednesday").value);
+// 	zone_wed[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_wednesday").value);
+// 	zone_wed[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_wednesday").value);
+// 	zone_wed[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_wednesday").value);
+
+// 	zone_thur[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_thursday").value);
+// 	zone_thur[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_thursday").value);
+// 	zone_thur[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_thursday").value);
+// 	zone_thur[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_thursday").value);
+
+// 	zone_fri[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_friday").value);
+// 	zone_fri[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_friday").value);
+// 	zone_fri[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_friday").value);
+// 	zone_fri[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_friday").value);
+
+// 	zone_sat[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_saturday").value);
+// 	zone_sat[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_saturday").value);
+// 	zone_sat[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_saturday").value);
+// 	zone_sat[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_saturday").value);
+
+// 	zone_sun[i][0] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_from_sunday").value);
+// 	zone_sun[i][1] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_from_sunday").value);
+// 	zone_sun[i][2] = parse_time_hours(document.getElementById("time_zone"+  [i]+"_to_sunday").value);
+// 	zone_sun[i][3] = parse_time_minutes(document.getElementById("time_zone"+[i]+"_to_sunday").value);
+// }
+
+// console.log(zone_mon);
+// console.log(zone_thue);
+// console.log(zone_wed);
+// console.log(zone_thur);
+// console.log(zone_fri);
+// console.log(zone_sat);
+// console.log(zone_sun);
+
+// //Parse Time Zones
+
+// return false;
+// }	
+// }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA_compatible"content ="ei=edge">
+	
+	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+	<script type="text/javascript" src="js/storage_handler.js" defer></script>
+	<script type="text/javascript" src="js/handler.js" defer></script>
+	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Quant DVR</title>
+</head>
+
+<body>
+	<header class="header clearfix">
+		<button type="button" id="toggleMenu" class="toggle_menu">
+			<i class="fa fa-bars"></i>
+		</button>
+		<div class="wrapper-simple-desc">
+			<div>
+				<h1 class="content_st" key="header">Storage</h1>
+			</div>
+			<div>
+				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
+				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+			</div>
+			<div id="battery_control">
+				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
+			</div>
+		</div>
+	</header>
+	<div class="main">
+
+	<div class="container-storage">
+
+		<div class="storage">
+			<h2 class="content_st" key="card">SD Card</h2>
+			<h1 class="content_st" key="syst">File System: <span id="sd_syst"> FAT32 </span></h1>
+			<h1 class="content_st" key="format">Video Format: <span id="format_sd">MP4</span></h1>
+			<br>
+			<p>Used: 5.67 GB | Free: 26.10 GB | Total: 31.77 GB</p>
+
+			<progress id="external_storane" max="100" value="30"></progress>
+			<div class="included-storage">
+				<div>
+				<button key="quick_form" id="quick_sd" class="btn-storage content_st" type="submit">Quick Format <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				</div>
+				<div>
+				<button key="full_form" id="full_sd" class="btn-storage content_st" type="submit">Full Format <i class="fa fa-trash" aria-hidden="true"></i></button>
+			</div>
+		</div>
+			<div class="container-rec">
+		<div>
+			<p class="content_rec" key="file_sys">File system:</p>
+		</div>
+		<div>
+			<select id="file_system" name="file-system-sel">
+				<option class="content_rec" key="ntfs" value="ntfs">NTFS</option>
+				<option class="content_rec" key="qbfs" value="qbfs">QBFS</option>
+			</select>
+		</div>
+	</div>
+	</div>
+</div>
+
+	<div class="container-storage">
+		<div class="storage">
+			<h2 class="content_st" key="int_mem">Internal Memory</h2>
+			<h1 class="content_st" key="syst_int">File System: <span id="sd_syst_int">FAT32 </span></h1>
+			<h1 class="content_st" key="format_int">Video Format: <span id="format_sd_int">MP4</span></h1>
+			<br>
+			<p> Used: 5.67 GB | Free: 26.10 GB | Total: 31.77 GB</p>
+
+			<progress id="internal_storage" max="100" value="85"></progress>
+
+			<div class="included-storage">
+				<div>
+				<button id="quick_int" class="btn-storage" type="submit">Quick Format <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				</div>
+				<div>
+				<button id="full_int" class="btn-storage" type="submit">Full Format <i class="fa fa-trash" aria-hidden="true"></i></button>
+			</div>
+		</div>
+			<div class="container-rec">
+		<div>
+			<p class="content_rec" key="file_sys">File system:</p>
+		</div>
+		<div>
+			<select id="file_system" name="file-system-sel">
+				<option class="content_rec" key="ntfs" value="ntfs">NTFS</option>
+				<option class="content_rec" key="qbfs" value="qbfs">QBFS</option>
+			</select>
+		</div>
+	</div>
+	</div>
+
+</div>
+	</div>
+	<nav class="vertical_nav">
+		<ul id="js-menu" class="menu">
+			<h2>Quant DVR</h2>
+			<hr>
+			<li class="menu--item">
+				<a href="index.html" class="menu--link" title="Main">
+
+					<span class="menu--label" key="main">Main</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="record.html" class="menu--link" title="Record">
+
+					<span class="menu--label" key="record">Record Settings</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="osd.html" class="menu--link" title="OSD">
+
+					<span class="menu--label" key="osd">OSD</span>
+				</a>
+			</li>
+
+<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label">Network Settings</span>
+				</label>
+
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="wlan.html" class="sub_menu--link">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link">Security</a>
+					</li>	
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link">VPN</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu--item active">
+				<a href="storage.html" class="menu--link" title="Storage">
+
+					<span class="menu--label" key="stor">Storage</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="rtsp_stream.html" class="menu--link" title="Stream">
+
+					<span class="menu--label" key="rtsp">RTSP Stream</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+					<span class="menu--label" key="shed">Sheduler</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="customize.html" class="menu--link" title="Service">
+
+					<span class="menu--label" key="cust">Customize</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="service.html" class="menu--link" title="Device Info">
+
+					<span class="menu--label" key="serv">Service</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_int.html" class="menu--link" title="Download Files">
+
+					<span class="menu--label" key="dow_int">Download Files INT</span>
+				</a>
+			</li>
+
+			<li class="menu--item">
+				<a href="download_ext.html" class="menu--link" title="Online Stream">
+
+					<span class="menu--label" key="dow_ext">Download Files EXT</span>
+				</a>
+			</li>
+			<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+					<span class="menu--label" key="cofdm">COFDM settings</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+<!-- 
+ <button id="collapse_menu" class="collapse_menu">
+      <i class="collapse_menu--icon  fa fa-fw"></i>
+ </button>
+-->
+
+</body>
+</html>

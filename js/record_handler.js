@@ -1,0 +1,71 @@
+$('#ecryption').on('click', function () {
+	var aes_field = document.getElementById('enc_key');
+	if ( $(this).is(':checked') ) {
+		aes_field.disabled = false;
+	} else {
+		aes_field.disabled = true;
+	}
+})
+
+for (var i = 3; i<=12; i+=0.5) {
+	if((i%1)==0)
+	{
+		var newOption = new Option (i+".0", i+".0");
+	}else{
+		var newOption = new Option (i, i);
+	}
+	cam_volt.append(newOption);
+}
+
+//*******************WEB SOCKET***********************************//
+function get_appropriate_ws_url(extra_url)
+{
+	var pcol;
+	var u = document.URL;
+
+	if (u.substring(0, 5) === "https") {
+		pcol = "wss://";
+		u = u.substr(8);
+	} else {
+		pcol = "ws://";
+		if (u.substring(0, 4) === "http")
+			u = u.substr(7);
+	}
+
+	u = u.split("/");
+
+	/* + "/xxx" bit is for IE10 workaround */
+
+	return pcol + u[0] + "/" + extra_url;
+}
+
+function new_ws(urlpath, protocol)
+{
+	return new WebSocket(urlpath, protocol);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+	var ws = new_ws("ws://10.0.1.27:7681", "lws-minimal");
+	ws.binaryType = "blob";
+	try {
+		ws.onopen = function() {
+			console.log("Connected");
+			console.log(ws);
+		};
+
+		ws.onmessage =function got_packet(msg) {
+			console.log("Data from Server: "  + msg.data);
+			var sizeInBytes = (msg.data).size;
+		};
+		
+		ws.onclose = function(){
+			console.log("Connection Close");
+		};
+	} catch(exception) {
+		alert("<p>Error " + exception);  
+	}
+	
+
+}, false);
+//*******************WEB SOCKET***********************************//
