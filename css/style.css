@@ -117,7 +117,7 @@ header h3 {
 .password-control {
   width: 10%;
   height: 10%;
-  padding-left: 15%;
+  padding-left: 11%;
   padding-bottom: 5%;
   background: url(../img/view.png) 0 0 no-repeat;
 }
@@ -128,7 +128,7 @@ header h3 {
 .password-control-key{
   width: 10%;
   height: 10%;
-  padding-left: 15%;
+  padding-left: 11%;
   padding-bottom: 5%;
   background: url(../img/view.png) 0 0 no-repeat;
 }
