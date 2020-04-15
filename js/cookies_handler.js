@@ -10,8 +10,7 @@ var ArrLang_Menu = {
 		'shed':'Sheduler',
 		'cust':'Customize',
 		'serv':'Service',
-		'dow_int':'Download Files INT',
-		'dow_ext':'Download Files EXT',
+		'dow_file':'Download Files',
 		'cofdm':'COFDM settings'
 	},
 	'ru':{
@@ -24,9 +23,51 @@ var ArrLang_Menu = {
 		'shed':'Планировщик',
 		'cust':'Кастомизация',
 		'serv':'Сервис',
-		'dow_int':'Загрузка MicroSD',
-		'dow_ext':'Загрузка Внутр.',
+		'dow_file':'Загрузка файлов',
 		'cofdm':'Настройка COFDM'
+	}
+};
+//sub_translate
+var Sub_Menu = {
+'en':{
+		'secur': 'Security',
+		'temp': 'CPU temp:',
+		'load': 'CPU load:',
+		'tcp_stat': 'Status Ethernet connection',
+		'tcp': 'TCP Connection:',
+		'proxy_stat': 'Status Proxy connection',
+		'proxy': 'Proxy Connection:',
+		'serv_con': 'Status Server connection',
+		'serv': 'Server Connection:',
+		'vpn_stat': 'Status VPN connection',
+		'vpn': 'VPN Connection',	
+		'apply': 'Apply',
+		'rtsp_con': 'Status RTSP connection',
+		'alpha': 'Alpha:',
+		'sync': 'Sync:',
+		'update': 'Update:',
+		'reboot': 'Reboot device',
+		'reset': 'Reset settings'				
+	},
+	'ru':{
+		'secur': 'Безопасность',
+		'temp': 'CPU темп:',
+		'load': 'CPU загр:',
+		'tcp_stat': 'Состояние Ethernet подключения',
+		'tcp': 'TCP Подключение:',
+		'proxy_stat': 'Состояние Proxy подключения',
+		'proxy': 'Proxy Подключение:',
+		'serv_con': 'Состояние Server подключения',
+		'serv': 'Server Подключение:',
+		'vpn_stat': 'Состояние VPN подключения',
+		'vpn': 'VPN Подключение',		
+		'apply': 'Сохр',
+		'rtsp_con': 'Состояние RTSP подключения',
+		'alpha': 'Прозрачность:',
+		'sync': 'Синх.',
+		'update': 'Обновить',
+		'reboot': 'Перезагрузка',
+		'reset': 'Сброс настр.'			
 	}
 };
 
@@ -93,7 +134,13 @@ var ArrRec = {
 		'good': 'Good',
 		'high': 'High',
 		'best': 'Best',
-		'format': 'Format:'
+		'format': 'Format:',
+		'off_voltage': 'Off',
+		'cam1': 'Camera 1',
+		'cam2': 'Camera 2',
+		'off_cam': 'Off',
+		'on_cam': 'On'
+
 	},
 	'ru':{
 		'header': 'Настройка Записи',
@@ -119,7 +166,12 @@ var ArrRec = {
 		'good': 'Хорошее',
 		'high': 'Высокое',
 		'best': 'Лучшее',
-		'format': 'Формат:'
+		'format': 'Формат:',
+		'off_voltage': 'выкл.',
+		'cam1': 'Камера 1',
+		'cam2': 'Камера 2',
+		'off_cam': 'выкл.',
+		'on_cam': 'вкл.'
 	}
 };
 
@@ -216,21 +268,25 @@ var ArrNet = {
 var ArrSt = {
 	'en':{
 		'header': 'Storage',
-		'card': 'SD Card',
+		'card': 'microSD',
 		'syst': 'File System:',
 		'format': 'Video Format:',
-		'int_mem': 'Internal Memory',
+		'int_mem': 'eMMC',
 		'syst_int': 'File System:',
-		'format_int': 'Video Format:'
+		'format_int': 'Video Format:',
+		'quick': 'Quick Format',
+		'full': 'Full Format'
 	},
 	'ru':{
 		'header': 'Хранилище',
-		'card': 'SD Карта',
+		'card': 'microSD',
 		'syst': 'Файловая система:',
 		'format': 'Видео формат:',
-		'int_mem': 'Внутренняя память',
+		'int_mem': 'eMMC',
 		'syst_int': 'Файловая система:',
-		'format_int': 'Видео формат:'
+		'format_int': 'Видео формат:',
+		'quick': 'Быстр.форм.',
+		'full': 'Полн.форм.'
 	}
 };
 
@@ -318,35 +374,39 @@ var ArrService = {
 
 var ArrSD = {
 	'en':{
-		'header': 'Download External Files',
-		'ext_mem': 'External Memory',
+		'header': 'Download MicroSD',
+		'ext_mem': 'MicroSD',
 		'name': 'Name',
 		'date': 'Date',
-		'size': 'Size'
+		'size': 'Size',
+		'extension' : 'Extension'
 	},
 	'ru':{
-		'header': 'Загрузка eMMC',
-		'ext_mem': 'Внутренняя память',
+		'header': 'Загрузка MicroSD',
+		'ext_mem': 'MicroSD',
 		'name': 'Имя',
 		'date': 'Дата',
-		'size': 'Размер'
+		'size': 'Размер',
+		'extension' : 'Расширение'
 	}
 };
 
 var ArrInt = {
 	'en':{
-		'header': 'Download Internal Files',
-		'int_mem': 'MicroSD',
+		'header': 'Download eMMC',
+		'int_mem': 'eMMC',
 		'name': 'Name',
 		'date': 'Date',
-		'size': 'Size'
+		'size': 'Size',
+		'extension' : 'Extension'
 	},
 	'ru':{
-		'header': 'Загрузка MicroSD',
-		'int_mem': 'MicroSD',
+		'header': 'Загрузка eMMC',
+		'int_mem': 'eMMC',
 		'name': 'Имя',
 		'date': 'Дата',
-		'size': 'Размер'
+		'size': 'Размер',
+		'extension' : 'Расширение'
 	}
 };
 
@@ -428,6 +488,9 @@ function check_config()
 			$('.content_cofdm').each(function(index, item){
 			$(this).text(ArrCOFDM["ru"][$(this).attr('key')]);
 		});
+			$('.sub_translate').each(function(index, item){
+			$(this).text(Sub_Menu["ru"][$(this).attr('key')]);
+		});
 		$("#language-sel").val('ru');
 	}
 	else if(language == "english"){
@@ -466,6 +529,9 @@ function check_config()
 		});
 			$('.content_cofdm').each(function(index, item){
 			$(this).text(ArrCOFDM["en"][$(this).attr('key')]);
+		});
+			$('.sub_translate').each(function(index, item){
+			$(this).text(Sub_Menu["en"][$(this).attr('key')]);
 		});
 		$("#language-sel").val('en');
 	}

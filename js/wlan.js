@@ -3,6 +3,21 @@ $('#wlan_apply').on('click', function () {
 	alert("test");
 });
 
+$('body').on('click', '.password-control', function(){
+
+	if ($('#password_input').attr('type') == 'password'){
+
+		$(this).addClass('view');
+		$('#password_input').attr('type', 'text');
+
+	} else {
+		$(this).removeClass('view');
+		$('#password_input').attr('type', 'password');
+	}
+	
+	return false;
+});
+
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
 {

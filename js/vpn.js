@@ -8,6 +8,21 @@ if(connected_vpn == 1)
 	status_connection_vpn.innerHTML = "No connection";
 }
 
+$('body').on('click', '.password-control', function(){
+
+	if ($('#vpn_password').attr('type') == 'password'){
+
+		$(this).addClass('view');
+		$('#vpn_password').attr('type', 'text');
+
+	} else {
+		$(this).removeClass('view');
+		$('#vpn_password').attr('type', 'password');
+	}
+	
+	return false;
+});
+
 
 $('#vpn_apply').on('click', function () {
 

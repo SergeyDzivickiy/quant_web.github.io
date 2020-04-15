@@ -27,8 +27,8 @@
 				<h1 class="content_net" key="header_sec">Security Settings</h1>
 			</div>
 			<div>
-				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
-				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+				<span class="cpu_info sub_translate" key="temp">CPU temp:</span><span class="cpu_info" id="cpu_temp">20°C</span><br>
+				<span class="cpu_info sub_translate" key="load">CPU load:</span><span class="cpu_info" id="cpu_load">70%</span>
 			</div>
 			<div id="battery_control">
 				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
@@ -64,7 +64,9 @@
 			<p class="content_rec" key="key_en">Encryption key:</p>
 		</div>
 		<div>
-			<input id="encrypt_key" type="text" disabled class="content_rec form-input " key="key" id="enc_key" name="enc_key" required pattern="([A-z0-9_.-]{1,32})" placeholder="enter encryption key"/>
+			<input id="encrypt_key" type="password" disabled class="content_rec form-input " key="key" name="enc_key" required pattern="([A-z0-9_.-]{1,32})" placeholder="enter encryption key"/>
+
+			<a href="#" class="password-control-key"></a>
 		</div> 
 	</div>
 	<div class="container-network">
@@ -84,13 +86,14 @@
 
 		<div>
 			<input id="user_pass" type="password" class="form-control" name="password" placeholder="Enter Password" required=""/> 
+			<a href="#" class="password-control"></a>
 		</div>
 	</div>
 	<div class="footer">
 		<div></div>
 		<div></div>
 		<div class="apply">
-			<button id="sec_apply" class="btn-control" type="submit">Apply</button>
+			<button id="sec_apply" key="apply" class="btn-control sub_translate" type="submit">Apply</button>
 		</div>
 	</div>
 
@@ -98,112 +101,107 @@
 
 
 <nav class="vertical_nav">
-	<ul id="js-menu" class="menu">
-		<h2>Quant DVR</h2>
-		<hr>
-		<li class="menu--item">
-			<a href="index.html" class="menu--link" title="Main">
+			<ul id="js-menu" class="menu">
+				<h2>Quant DVR</h2>
+				<hr>
+				<li class="menu--item">
+					<a id="main" href="index.html" class="menu--link" title="Main">
 
-				<span class="menu--label" key="main">Main</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="record.html" class="menu--link" title="Record">
-
-				<span class="menu--label" key="record">Record Settings</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="osd.html" class="menu--link" title="OSD">
-
-				<span class="menu--label" key="osd">OSD</span>
-			</a>
-		</li>
-
-		<li class="menu--item  menu--item__has_sub_menu">
-			<label class="menu--link" title="Network Settings">
-				<span class="menu--label active">Network Settings</span>
-			</label>
-
-			<ul class="sub_menu">
-				<li class="sub_menu--item">
-					<a href="wlan.html" class="sub_menu--link">WLAN</a>
+						<span class="menu--label" key="main">Main</span>
+					</a>
 				</li>
-				<li class="sub_menu--item">
-					<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+				<li class="menu--item menu--item__has_sub_menu menu--subitens__opened">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="net_s">Network Settings</span>
+					</label>
+
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="wlan.html" class="sub_menu--link">WLAN</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="proxy.html" class="sub_menu--link">Proxy</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="web.html" class="sub_menu--link">Web</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="vpn.html" class="sub_menu--link">VPN</a>
+						</li>
+						<li class="sub_menu--item active">
+							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
+						</li>	
+					</ul>
 				</li>
-				<li class="sub_menu--item">
-					<a href="proxy.html" class="sub_menu--link">Proxy</a>
+
+				<li class="menu--item">
+					<a href="record.html" class="menu--link" title="Record">
+
+						<span class="menu--label" key="record">Record Settings</span>
+					</a>
 				</li>
-				<li class="sub_menu--item">
-					<a href="web.html" class="sub_menu--link">Web</a>
+			<li class="menu--item">
+					<a href="rtsp_stream.html" class="menu--link" title="Stream">
+
+						<span class="menu--label" key="rtsp">RTSP Stream</span>
+					</a>
+			</li>
+				<li class="menu--item">
+					<a href="osd.html" class="menu--link" title="OSD">
+
+						<span class="menu--label" key="osd">OSD</span>
+					</a>
 				</li>
-				<li class="sub_menu--item active">
-					<a href="security.html" class="sub_menu--link">Security</a>
-				</li>	
-				<li class="sub_menu--item">
-					<a href="vpn.html" class="sub_menu--link">VPN</a>
+				<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+
+						<span class="menu--label" key="cofdm">COFDM settings</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+						<span class="menu--label" key="shed">Sheduler</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="storage.html" class="menu--link" title="Storage">
+
+						<span class="menu--label" key="stor">Storage</span>
+					</a>
+				</li>
+	
+				<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="dow_file">Download Files</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="download_int.html" class="sub_menu--link">eMMC</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu--item">
+					<a href="service.html" class="menu--link" title="Device Info">
+
+						<span class="menu--label" key="serv">Service</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="customize.html" class="menu--link" title="Service">
+
+						<span class="menu--label" key="cust">Customize</span>
+					</a>
 				</li>
 			</ul>
-		</li>
+		</nav>
 
-		<li class="menu--item">
-			<a href="storage.html" class="menu--link" title="Storage">
-
-				<span class="menu--label" key="stor">Storage</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="rtsp_stream.html" class="menu--link" title="Stream">
-
-				<span class="menu--label" key="rtsp">RTSP Stream</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="sheduler.html" class="menu--link" title="Delayed Start">
-
-				<span class="menu--label" key="shed">Sheduler</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="customize.html" class="menu--link" title="Service">
-
-				<span class="menu--label" key="cust">Customize</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="service.html" class="menu--link" title="Device Info">
-
-				<span class="menu--label" key="serv">Service</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="download_int.html" class="menu--link" title="Download Files">
-
-				<span class="menu--label" key="dow_int">Download Files INT</span>
-			</a>
-		</li>
-
-		<li class="menu--item">
-			<a href="download_ext.html" class="menu--link" title="Online Stream">
-
-				<span class="menu--label" key="dow_ext">Download Files EXT</span>
-			</a>
-		</li>
-		<li class="menu--item">
-			<a href="cofdm.html" class="menu--link" title="Online Stream">
-				<span class="menu--label" key="cofdm">COFDM settings</span>
-			</a>
-		</li>
-	</ul>
-</nav>
 
 </body>
 </html>

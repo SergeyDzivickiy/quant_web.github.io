@@ -114,6 +114,28 @@ header h3 {
   background-size: .65em auto, 100%; 
 } 
 
+.password-control {
+  width: 10%;
+  height: 10%;
+  padding-left: 15%;
+  padding-bottom: 5%;
+  background: url(../img/view.png) 0 0 no-repeat;
+}
+.password-control.view {
+  background: url(../img/no_view.png) 0 0 no-repeat;
+}
+
+.password-control-key{
+  width: 10%;
+  height: 10%;
+  padding-left: 15%;
+  padding-bottom: 5%;
+  background: url(../img/view.png) 0 0 no-repeat;
+}
+.password-control-key.view{
+  background: url(../img/no_view.png) 0 0 no-repeat;
+}
+
 
 .clearfix:after {
   content: "";
@@ -582,7 +604,7 @@ p{
   margin: 0 2px 20px 10px;
   cursor: pointer;
   position: relative;
-  width: 80px;
+  width: 100px;
   left: 3%;
   transform: translate(-50%, 0);
 }

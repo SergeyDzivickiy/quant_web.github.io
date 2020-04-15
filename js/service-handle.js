@@ -41,6 +41,7 @@ $('#reset').on('click', function () {
 	}
 });
 
+
 $('#reboot').on('click', function () {
 	var is_reboot = confirm("Reboot device?");
 	if (is_reboot) 
@@ -123,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }
 $("#upd_firm").click(function(e) {
+	alert("update");
 	e.preventDefault();
 	sendFile();
 });	

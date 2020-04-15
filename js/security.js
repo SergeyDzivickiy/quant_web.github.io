@@ -1,6 +1,4 @@
 
-
-
 $('#ecryption').on('click', function () {
 	var aes_field = document.getElementById('encrypt_key');
 	if ( $(this).is(':checked') ) {
@@ -14,6 +12,36 @@ $('#sec_apply').on('click', function () {
 
 	alert("test");
 });
+
+
+$('.password-control').click(function(){
+	if ($('#user_pass').attr('type') == 'password'){
+
+		$(this).addClass('view');
+		$('#user_pass').attr('type', 'text');
+
+	} else {
+		$(this).removeClass('view');
+		$('#user_pass').attr('type', 'password');
+	}
+	
+	return false;
+});
+
+
+$('.password-control-key').click(function(){
+	if ($('#encrypt_key').attr('type') == 'password'){
+		$(this).addClass('view');
+		$('#encrypt_key').attr('type', 'text');
+
+	} else {
+		$(this).removeClass('view');
+		$('#encrypt_key').attr('type', 'password');
+	}
+	
+	return false;
+});
+
 
 
 //*******************WEB SOCKET***********************************//

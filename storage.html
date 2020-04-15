@@ -26,8 +26,8 @@
 				<h1 class="content_st" key="header">Storage</h1>
 			</div>
 			<div>
-				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
-				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+				<span class="cpu_info sub_translate" key="temp">CPU temp:</span><span class="cpu_info" id="cpu_temp">20°C</span><br>
+				<span class="cpu_info sub_translate" key="load">CPU load:</span><span class="cpu_info" id="cpu_load">70%</span>
 			</div>
 			<div id="battery_control">
 				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
@@ -39,7 +39,7 @@
 	<div class="container-storage">
 
 		<div class="storage">
-			<h2 class="content_st" key="card">SD Card</h2>
+			<h2 class="content_st" key="card">microSD</h2>
 			<h1 class="content_st" key="syst">File System: <span id="sd_syst"> FAT32 </span></h1>
 			<h1 class="content_st" key="format">Video Format: <span id="format_sd">MP4</span></h1>
 			<br>
@@ -48,10 +48,10 @@
 			<progress id="external_storane" max="100" value="30"></progress>
 			<div class="included-storage">
 				<div>
-				<button key="quick_form" id="quick_sd" class="btn-storage content_st" type="submit">Quick Format <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				<button key="quick_form" id="quick_sd" class="btn-storage content_st" type="submit"><text class= "content_st" key="quick">Quick Format </text><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 				</div>
 				<div>
-				<button key="full_form" id="full_sd" class="btn-storage content_st" type="submit">Full Format <i class="fa fa-trash" aria-hidden="true"></i></button>
+				<button key="full_form" id="full_sd" class="btn-storage content_st" type="submit"><text class= "content_st" key="full">Full Format </text> <i class="fa fa-trash" aria-hidden="true"></i></button>
 			</div>
 		</div>
 			<div class="container-rec">
@@ -70,20 +70,26 @@
 
 	<div class="container-storage">
 		<div class="storage">
-			<h2 class="content_st" key="int_mem">Internal Memory</h2>
+			<h2 class="content_st" key="int_mem">eMMC</h2>
 			<h1 class="content_st" key="syst_int">File System: <span id="sd_syst_int">FAT32 </span></h1>
 			<h1 class="content_st" key="format_int">Video Format: <span id="format_sd_int">MP4</span></h1>
 			<br>
+<!-- 			<text class="content_st" key="used">Used:</text>
+			<text id="used_emmc">5.67 GB</text>|
+			<text class = "content_st"  key="free">Free:</text>
+			<text id="free_emmc">26.10 GB</text>|
+			<text class="content_st" key="total">Total:</text>
+			<text id ="total_emmc">31.77 GB</text> -->
 			<p> Used: 5.67 GB | Free: 26.10 GB | Total: 31.77 GB</p>
 
 			<progress id="internal_storage" max="100" value="85"></progress>
 
 			<div class="included-storage">
 				<div>
-				<button id="quick_int" class="btn-storage" type="submit">Quick Format <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				<button id="quick_int" class="btn-storage" type="submit"><text class= "content_st" key="quick">Quick Format</text> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
 				</div>
 				<div>
-				<button id="full_int" class="btn-storage" type="submit">Full Format <i class="fa fa-trash" aria-hidden="true"></i></button>
+				<button id="full_int" class="btn-storage" type="submit"><text class= "content_st" key="full">Full Format</text><i class="fa fa-trash" aria-hidden="true"></i></button>
 			</div>
 		</div>
 			<div class="container-rec">
@@ -102,112 +108,106 @@
 </div>
 	</div>
 	<nav class="vertical_nav">
-		<ul id="js-menu" class="menu">
-			<h2>Quant DVR</h2>
-			<hr>
+			<ul id="js-menu" class="menu">
+				<h2>Quant DVR</h2>
+				<hr>
+				<li class="menu--item">
+					<a id="main" href="index.html" class="menu--link" title="Main">
+
+						<span class="menu--label" key="main">Main</span>
+					</a>
+				</li>
+				<li class="menu--item menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="net_s">Network Settings</span>
+					</label>
+
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="wlan.html" class="sub_menu--link">WLAN</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="proxy.html" class="sub_menu--link">Proxy</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="web.html" class="sub_menu--link">Web</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="vpn.html" class="sub_menu--link">VPN</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
+						</li>	
+					</ul>
+				</li>
+
+				<li class="menu--item">
+					<a href="record.html" class="menu--link" title="Record">
+
+						<span class="menu--label" key="record">Record Settings</span>
+					</a>
+				</li>
 			<li class="menu--item">
-				<a href="index.html" class="menu--link" title="Main">
+					<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
-					<span class="menu--label" key="main">Main</span>
-				</a>
+						<span class="menu--label" key="rtsp">RTSP Stream</span>
+					</a>
 			</li>
+				<li class="menu--item">
+					<a href="osd.html" class="menu--link" title="OSD">
 
-			<li class="menu--item">
-				<a href="record.html" class="menu--link" title="Record">
-
-					<span class="menu--label" key="record">Record Settings</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="osd.html" class="menu--link" title="OSD">
-
-					<span class="menu--label" key="osd">OSD</span>
-				</a>
-			</li>
-
-<li class="menu--item  menu--item__has_sub_menu">
-				<label class="menu--link" title="Network Settings">
-					<span class="menu--label">Network Settings</span>
-				</label>
-
-				<ul class="sub_menu">
-					<li class="sub_menu--item">
-						<a href="wlan.html" class="sub_menu--link">WLAN</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="proxy.html" class="sub_menu--link">Proxy</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="web.html" class="sub_menu--link">Web</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="security.html" class="sub_menu--link">Security</a>
-					</li>	
-					<li class="sub_menu--item">
-						<a href="vpn.html" class="sub_menu--link">VPN</a>
-					</li>
-				</ul>
-			</li>
-
-			<li class="menu--item active">
-				<a href="storage.html" class="menu--link" title="Storage">
-
-					<span class="menu--label" key="stor">Storage</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="rtsp_stream.html" class="menu--link" title="Stream">
-
-					<span class="menu--label" key="rtsp">RTSP Stream</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="sheduler.html" class="menu--link" title="Delayed Start">
-
-					<span class="menu--label" key="shed">Sheduler</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="customize.html" class="menu--link" title="Service">
-
-					<span class="menu--label" key="cust">Customize</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="service.html" class="menu--link" title="Device Info">
-
-					<span class="menu--label" key="serv">Service</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="download_int.html" class="menu--link" title="Download Files">
-
-					<span class="menu--label" key="dow_int">Download Files INT</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="download_ext.html" class="menu--link" title="Online Stream">
-
-					<span class="menu--label" key="dow_ext">Download Files EXT</span>
-				</a>
-			</li>
-			<li class="menu--item">
+						<span class="menu--label" key="osd">OSD</span>
+					</a>
+				</li>
+				<li class="menu--item">
 					<a href="cofdm.html" class="menu--link" title="Online Stream">
-					<span class="menu--label" key="cofdm">COFDM settings</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+
+						<span class="menu--label" key="cofdm">COFDM settings</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+						<span class="menu--label" key="shed">Sheduler</span>
+					</a>
+				</li>
+				<li class="menu--item active">
+					<a href="storage.html" class="menu--link" title="Storage">
+
+						<span class="menu--label" key="stor">Storage</span>
+					</a>
+				</li>
+	
+				<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="dow_file">Download Files</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="download_int.html" class="sub_menu--link">eMMC</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu--item">
+					<a href="service.html" class="menu--link" title="Device Info">
+
+						<span class="menu--label" key="serv">Service</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="customize.html" class="menu--link" title="Service">
+
+						<span class="menu--label" key="cust">Customize</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
 <!-- 
  <button id="collapse_menu" class="collapse_menu">

@@ -24,10 +24,10 @@
 			<div>
 				<h1 class="content_main" key="header">Main</h1>
 			</div>
-		<div>
-			<p class="cpu_info">CPU temp: <span id="cpu_temp"></span></p>
-			<p class="cpu_info">CPU load: <span id="cpu_load"></span></p>
-		</div>
+			<div>
+				<span class="cpu_info sub_translate" key="temp">CPU temp:</span><span class="cpu_info" id="cpu_temp">20°C</span><br>
+				<span class="cpu_info sub_translate" key="load">CPU load:</span><span class="cpu_info" id="cpu_load">70%</span>
+			</div>
 		<div id="battery_control">
 			<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
 		</div>
@@ -108,24 +108,9 @@
 						<span class="menu--label" key="main">Main</span>
 					</a>
 				</li>
-
-				<li class="menu--item">
-					<a href="record.html" class="menu--link" title="Record">
-
-						<span class="menu--label" key="record">Record Settings</span>
-					</a>
-				</li>
-
-				<li class="menu--item">
-					<a href="osd.html" class="menu--link" title="OSD">
-
-						<span class="menu--label" key="osd">OSD</span>
-					</a>
-				</li>
-
 				<li class="menu--item  menu--item__has_sub_menu">
 					<label class="menu--link" title="Network Settings">
-						<span class="menu--label">Network Settings</span>
+					<span class="menu--label" key="net_s">Network Settings</span>
 					</label>
 
 					<ul class="sub_menu">
@@ -142,67 +127,74 @@
 							<a href="web.html" class="sub_menu--link">Web</a>
 						</li>
 						<li class="sub_menu--item">
-							<a href="security.html" class="sub_menu--link">Security</a>
-						</li>	
-						<li class="sub_menu--item">
 							<a href="vpn.html" class="sub_menu--link">VPN</a>
 						</li>
+						<li class="sub_menu--item">
+							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
+						</li>	
 					</ul>
 				</li>
 
 				<li class="menu--item">
-					<a href="storage.html" class="menu--link" title="Storage">
+					<a href="record.html" class="menu--link" title="Record">
 
-						<span class="menu--label" key="stor">Storage</span>
+						<span class="menu--label" key="record">Record Settings</span>
 					</a>
 				</li>
-
-				<li class="menu--item">
+			<li class="menu--item">
 					<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
 						<span class="menu--label" key="rtsp">RTSP Stream</span>
 					</a>
-				</li>
+			</li>
+				<li class="menu--item">
+					<a href="osd.html" class="menu--link" title="OSD">
 
+						<span class="menu--label" key="osd">OSD</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="cofdm.html" class="menu--link" title="Online Stream">
+
+						<span class="menu--label" key="cofdm">COFDM settings</span>
+					</a>
+				</li>
 				<li class="menu--item">
 					<a href="sheduler.html" class="menu--link" title="Delayed Start">
 
 						<span class="menu--label" key="shed">Sheduler</span>
 					</a>
 				</li>
-
 				<li class="menu--item">
-					<a href="customize.html" class="menu--link" title="Service">
+					<a href="storage.html" class="menu--link" title="Storage">
 
-						<span class="menu--label" key="cust">Customize</span>
+						<span class="menu--label" key="stor">Storage</span>
 					</a>
 				</li>
-
+	
+				<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="dow_file">Download Files</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="download_int.html" class="sub_menu--link">eMMC</a>
+						</li>
+					</ul>
+				</li>
 				<li class="menu--item">
 					<a href="service.html" class="menu--link" title="Device Info">
 
 						<span class="menu--label" key="serv">Service</span>
 					</a>
 				</li>
-
 				<li class="menu--item">
-					<a href="download_int.html" class="menu--link" title="Download Files">
+					<a href="customize.html" class="menu--link" title="Service">
 
-						<span class="menu--label" key="dow_int">Download Files INT</span>
-					</a>
-				</li>
-
-				<li class="menu--item">
-					<a href="download_ext.html" class="menu--link" title="Online Stream">
-
-						<span class="menu--label" key="dow_ext">Download Files EXT</span>
-					</a>
-				</li>
-
-				<li class="menu--item">
-					<a href="cofdm.html" class="menu--link" title="Online Stream">
-
-						<span class="menu--label" key="cofdm">COFDM settings</span>
+						<span class="menu--label" key="cust">Customize</span>
 					</a>
 				</li>
 			</ul>

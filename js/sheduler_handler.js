@@ -1,3 +1,8 @@
+	$('#shed_save').click(function(){
+		alert("test");
+	});
+
+
 	var collapse_m = true, collapse_thue = true, collapse_w = true, collapse_thur = true, collapse_f = true, collapse_sat = true, collapse_sun = true;
 
 	$('#plus-monday').click(function(){

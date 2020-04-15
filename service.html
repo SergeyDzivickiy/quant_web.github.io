@@ -26,8 +26,8 @@
 				<h1 class="content_serv" key="header">Service</h1>
 			</div>
 			<div>
-				<p class="cpu_info">CPU temp: <span id="cpu_temp">20°C</span></p>
-				<p class="cpu_info">CPU load: <span id="cpu_load">70%</span></p>
+				<span class="cpu_info sub_translate" key="temp">CPU temp:</span><span class="cpu_info" id="cpu_temp">20°C</span><br>
+				<span class="cpu_info sub_translate" key="load">CPU load:</span><span class="cpu_info" id="cpu_load">70%</span>
 			</div>
 			<div id="battery_control">
 				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
@@ -80,7 +80,7 @@
 
 		<div class="sync_time_button">
 			<div class="apply">
-				<button id="sync_butt" class="btn-sync" type="submit">Sync <i class="fa fa-refresh" aria-hidden="true"></i></button>
+				<button id="sync_butt" class="btn-sync" type="submit"><text class="sub_translate" key="sync">Sync </text><i class="fa fa-refresh" aria-hidden="true"></i></button>
 			</div>
 		</div>
 
@@ -93,7 +93,7 @@
 
 		<form id ="firmware" name="firmware" enctype="multipart/form-data">
 			<input type="file" accept=".bin" name="firm_file" id="file_update"class="custom-file-input">
-			<button class="content_serv btn-update" id="upd_firm" type="submit" value="Update device">Update <i class="fa fa-spinner" aria-hidden="true"></i></button>
+			<button class="content_serv btn-update" id="upd_firm" type="submit" value="Update device"><text class="sub_translate" key="update">Update</text> <i class="fa fa-spinner" aria-hidden="true"></i></button>
 			
 		</form> 
 	</div>
@@ -130,119 +130,113 @@
 			<div></div>
 			<div class="apply">
 
-				<button id="reboot" class="content_serv btn-service" key="reboot" type="submit" >Reboot device <i class="fa fa-retweet" aria-hidden="true"></i></button>
+				<button id="reboot" class="content_serv btn-service" key="reboot" type="submit" ><text class="sub_translate" key="reboot">Reboot device </text><i class="fa fa-retweet" aria-hidden="true"></i></button>
 
-				<button id="reset" class="content_serv btn-service" key="res" type="submit" >Reset settings <i class="fa fa-eraser" aria-hidden="true"></i> </button>
+				<button id="reset" class="content_serv btn-service" key="res" type="submit" ><text class="sub_translate" key="reset">Reset settings </text><i class="fa fa-eraser" aria-hidden="true"></i> </button>
 			</div>
 		</div>
 
 <nav class="vertical_nav">
-		<ul id="js-menu" class="menu">
-			<h2>Quant DVR</h2>
-			<hr>
+			<ul id="js-menu" class="menu">
+				<h2>Quant DVR</h2>
+				<hr>
+				<li class="menu--item">
+					<a id="main" href="index.html" class="menu--link" title="Main">
+
+						<span class="menu--label" key="main">Main</span>
+					</a>
+				</li>
+				<li class="menu--item menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="net_s">Network Settings</span>
+					</label>
+
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="wlan.html" class="sub_menu--link">WLAN</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="proxy.html" class="sub_menu--link">Proxy</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="web.html" class="sub_menu--link">Web</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="vpn.html" class="sub_menu--link">VPN</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
+						</li>	
+					</ul>
+				</li>
+
+				<li class="menu--item">
+					<a href="record.html" class="menu--link" title="Record">
+
+						<span class="menu--label" key="record">Record Settings</span>
+					</a>
+				</li>
 			<li class="menu--item">
-				<a href="index.html" class="menu--link" title="Main">
+					<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
-					<span class="menu--label" key="main">Main</span>
-				</a>
+						<span class="menu--label" key="rtsp">RTSP Stream</span>
+					</a>
 			</li>
+				<li class="menu--item">
+					<a href="osd.html" class="menu--link" title="OSD">
 
-			<li class="menu--item">
-				<a href="record.html" class="menu--link" title="Record">
-
-					<span class="menu--label" key="record">Record Settings</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="osd.html" class="menu--link" title="OSD">
-
-					<span class="menu--label" key="osd">OSD</span>
-				</a>
-			</li>
-
-<li class="menu--item  menu--item__has_sub_menu">
-				<label class="menu--link" title="Network Settings">
-					<span class="menu--label">Network Settings</span>
-				</label>
-
-				<ul class="sub_menu">
-					<li class="sub_menu--item">
-						<a href="wlan.html" class="sub_menu--link">WLAN</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="proxy.html" class="sub_menu--link">Proxy</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="web.html" class="sub_menu--link">Web</a>
-					</li>
-					<li class="sub_menu--item">
-						<a href="security.html" class="sub_menu--link">Security</a>
-					</li>	
-					<li class="sub_menu--item">
-						<a href="vpn.html" class="sub_menu--link">VPN</a>
-					</li>
-				</ul>
-			</li>
-
-			<li class="menu--item">
-				<a href="storage.html" class="menu--link" title="Storage">
-
-					<span class="menu--label" key="stor">Storage</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="rtsp_stream.html" class="menu--link" title="Stream">
-
-					<span class="menu--label" key="rtsp">RTSP Stream</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="sheduler.html" class="menu--link" title="Delayed Start">
-
-					<span class="menu--label" key="shed">Sheduler</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="customize.html" class="menu--link" title="Service">
-
-					<span class="menu--label" key="cust">Customize</span>
-				</a>
-			</li>
-
-			<li class="menu--item active">
-				<a href="service.html" class="menu--link" title="Device Info">
-
-					<span class="menu--label" key="serv">Service</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="download_int.html" class="menu--link" title="Download Files">
-
-					<span class="menu--label" key="dow_int">Download Files INT</span>
-				</a>
-			</li>
-
-			<li class="menu--item">
-				<a href="download_ext.html" class="menu--link" title="Online Stream">
-
-					<span class="menu--label" key="dow_ext">Download Files EXT</span>
-				</a>
-			</li>
-			<li class="menu--item">
+						<span class="menu--label" key="osd">OSD</span>
+					</a>
+				</li>
+				<li class="menu--item">
 					<a href="cofdm.html" class="menu--link" title="Online Stream">
-					<span class="menu--label" key="cofdm">COFDM settings</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+
+						<span class="menu--label" key="cofdm">COFDM settings</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+						<span class="menu--label" key="shed">Sheduler</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="storage.html" class="menu--link" title="Storage">
+
+						<span class="menu--label" key="stor">Storage</span>
+					</a>
+				</li>
+	
+				<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="dow_file">Download Files</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="download_int.html" class="sub_menu--link">eMMC</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu--item active">
+					<a href="service.html" class="menu--link" title="Device Info">
+
+						<span class="menu--label" key="serv">Service</span>
+					</a>
+				</li>
+				<li class="menu--item">
+					<a href="customize.html" class="menu--link" title="Service">
+
+						<span class="menu--label" key="cust">Customize</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
 <!-- 
  <button id="collapse_menu" class="collapse_menu">

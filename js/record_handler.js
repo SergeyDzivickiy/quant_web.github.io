@@ -1,12 +1,3 @@
-$('#ecryption').on('click', function () {
-	var aes_field = document.getElementById('enc_key');
-	if ( $(this).is(':checked') ) {
-		aes_field.disabled = false;
-	} else {
-		aes_field.disabled = true;
-	}
-})
-
 for (var i = 3; i<=12; i+=0.5) {
 	if((i%1)==0)
 	{
@@ -16,6 +7,15 @@ for (var i = 3; i<=12; i+=0.5) {
 	}
 	cam_volt.append(newOption);
 }
+
+
+$('#en_cam1').on('click', function () {
+
+});
+
+$('#en_cam2').on('click', function () {
+
+});
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)

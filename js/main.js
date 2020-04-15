@@ -69,15 +69,6 @@ function timerRecStop() {
 
 /////*******************RTSP STREAM HANDLER******//////////
 
-$('#rtsp_stream').on('click', function () {
-	if ( $(this).is(':checked') ) {
-		alert("RTSP Stream Start");
-	} else {
-		alert("RTSP Stream Stop");
-	}
-})
-
-
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
