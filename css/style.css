@@ -114,7 +114,7 @@ header h3 {
   background-size: .65em auto, 100%; 
 } 
 
-.password-control {
+/* .password-control {
   width: 10%;
   height: 10%;
 /*   padding-left: 11%; */
@@ -134,7 +134,7 @@ header h3 {
 }
 .password-control-key.view{
   background: url(../img/no_view.png) 0 0 no-repeat;
-}
+} */
 
 
 .clearfix:after {
