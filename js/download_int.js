@@ -89,7 +89,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$("#download_mp4_1").click(function () {
 		$('.preloader').addClass('activev');
-		ws.send("0x74");
+		sleep(3000).then(function() {
+		$('.preloader').removeClass('activev');
+	});
+		//ws.send("0x74");
 	});
 
 }, false);
@@ -114,9 +117,6 @@ function downloadFile(blob, filename)
 	a.remove();
 	document.addEventListener("focus", w=>{window.URL.revokeObjectURL(blob)});
 
-	sleep(1000).then(function() {
-		$('.preloader').removeClass('activev');
-	});
 		//ws.send("0xff");
 
 	}

@@ -33,9 +33,15 @@ function osdGetTimeString() {
 
 $('#reset').on('click', function () {
 	var is_reset = confirm("Reset device setting ?");
+	
 	if (is_reset) 
 	{
 		alert("reset");
+		document.getElementById("preload").innerHTML = "Reset settings...";
+		$('.preloader').addClass('activev');
+		sleep(5000).then(function() {
+			$('.preloader').removeClass('activev');
+		});
 	}else{
 		alert("no reset");
 	}
@@ -47,6 +53,11 @@ $('#reboot').on('click', function () {
 	if (is_reboot) 
 	{
 		alert("reboot");
+		document.getElementById("preload").innerHTML = "Reboot device...";
+		$('.preloader').addClass('activev');
+		sleep(5000).then(function() {
+			$('.preloader').removeClass('activev');
+		});
 	}else{
 		alert("no reboot");
 	}
@@ -56,6 +67,10 @@ $('#sync_butt').on('click', function () {
 	alert("sync");
 });
 
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
