@@ -44,6 +44,7 @@
 				</video>
 
 				<img class="no-video" id="cam1_no_vid" src="img/no-video.png" alt="no-video" hidden>
+				<p style="padding-left: 42%; display: none;" id="mob_cam1" class="content_main" key="cam1">Camera 1</p>
 			</div>
 
 			<div>
@@ -51,6 +52,7 @@
 					<source src="media/test_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 					</video> 
 				<img class="no-video" id="cam2_no_vid" src="img/no-video.png" alt="no-video" hidden>
+				<p style="padding-left: 42%; display: none;" id="mob_cam2" class="content_main" key="cam2">Camera 2</p>
 			</div>
 			</div>
 
@@ -59,13 +61,13 @@
 
 				</div>
 				<div>
-					<p class="content_main" key="cam1">Camera 1</p>
+					<p id="desc_cam1" class="content_main" key="cam1">Camera 1</p>
 				</div>
 				<div>
 
 				</div>
 				<div>
-					<p class="content_main" key="cam2">Camera 2</p>
+					<p id="desc_cam2" class="content_main" key="cam2">Camera 2</p>
 				</div>
 			</div>
 			<div class="container">
@@ -140,6 +142,19 @@
 
 						<span class="menu--label" key="record">Record Settings</span>
 					</a>
+				</li>
+			<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="cam_sett">Cameras Settings</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1"> Camera 1</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="camera2_settings.html" class="sub_menu--link sub_translate" key="cam2">Camera 2</a>
+						</li>
+					</ul>
 				</li>
 			<li class="menu--item">
 					<a href="rtsp_stream.html" class="menu--link" title="Stream">

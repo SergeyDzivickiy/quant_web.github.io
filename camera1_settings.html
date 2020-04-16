@@ -4,37 +4,121 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA_compatible"content ="ei=edge">
-
+	
 	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
-	<script type="text/javascript" src="js/cofdm.js" defer></script>
 	<script type="text/javascript" src="js/handler.js" defer></script>
-	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
+	<script type="text/javascript" src="js/cam1_handler.js" defer></script>
+	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer></script>
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Quant DVR</title>
 
 </head>
-<body>
+<body >
 	<header class="header clearfix">
 		<button type="button" id="toggleMenu" class="toggle_menu">
 			<i class="fa fa-bars"></i>
 		</button>
 		<div class="wrapper-simple-desc">
 			<div>
-				<h1 class="content_cofdm" key="header">COFDM settings</h1>
+				<h1 class="content_main" key="header_cam1">Camera 1</h1>
 			</div>
 			<div>
 				<span class="cpu_info sub_translate" key="temp">CPU temp:</span><span class="cpu_info" id="cpu_temp">20°C</span><br>
 				<span class="cpu_info sub_translate" key="load">CPU load:</span><span class="cpu_info" id="cpu_load">70%</span>
 			</div>
 			<div id="battery_control">
-			<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
+				<img src="img/bat/5.png" class="bat-img"  width="80px" height="40px">
 			</div>
 		</div>
 	</header>
+	<div class="main">
+		<div class="padding-container"></div>
+		<div class="container-settings">
+			<div>
+				<p class="content_main" key="rec">Camera 1:</p>
+			</div>
+			<div id="toggles">
+				off/on
+				<label class="switch">
+					<input type="checkbox" id="cam1_en" checked>
+					<span></span> 
+				</label>
+			</div>
+			<div>
+				<p class ="sub_translate" key="voltage">Voltage:</p>
+			</div>
+			<div>
+				<select id="cam_volt" name="cam-tvoltage-sel">	
+				</select>
+			</div>
+		</div>
 
-	<nav class="vertical_nav">
+		<div class="cameras-settings" id="camera1_sett">
+			<div>
+				<video class="video-settings" id="cam1" controls="controls" preload="none">
+					<source src="media/test_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					</video>
+
+					<img class="no-video" id="cam1_no_vid" src="img/no-video.png" alt="no-video" hidden>
+
+					<p style="padding-left: 45%;" id="set_cam1" class="content_main" key="cam1">Camera 1</p>
+				</div>
+
+				<div class="contr" id="controler">
+					<div class="cameras-controler-top" id="cam1_contr_top">
+						<!-- 		<p>Controler</p> -->
+					<!-- 	<div class="back_circle"></div> -->
+						<button class="top_controler" id="top_cam1"></button>
+					</div>
+
+					<div class="cameras-controler-middle" id="cam1_contr_mid">
+						<div>
+							<button class="middle_left_controler" id="middle_left_cam1"></button>
+
+							<button class="middle_cent_controler" id="middle_cent_cam1"></button>
+
+							<button class="middle_right_controler" id="middle_right_cam1"></button>
+						</div>
+					</div>	
+					<div class="cameras-controler-bot" id="cam1_contr_bot">
+						<button class="bot_controler" id="bot_cam1"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<!-- 		<div class="cameras-settings" id="camera1_sett">
+			<div>
+				<video class="video-settings" id="cam1" controls="controls" preload="none">
+					<source src="media/test_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					</video>
+
+					<img class="no-video" id="cam1_no_vid" src="img/no-video.png" alt="no-video" hidden>
+					<p style="padding-left: 8%;" id="set_cam1" class="content_main" key="cam1">Camera 1</p>
+				</div>
+			</div>
+			<div class="cameras-controler-top" id="cam1_contr_top">
+						<p>Controler</p>
+				<button class="top_controler" id="top_cam1"></button>
+			</div>
+
+			<div class="cameras-controler-middle" id="cam1_contr_mid">
+				<div>
+					<button class="middle_left_controler" id="middle_left_cam1"></button>
+
+					<button class="middle_cent_controler" id="middle_cent_cam1"></button>
+
+					<button class="middle_right_controler" id="middle_right_cam1"></button>
+				</div>
+			</div>	
+			<div class="cameras-controler-bot" id="cam1_contr_bot">
+				<button class="bot_controler" id="bot_cam1"></button>
+			</div>
+		</div> -->
+		<nav class="vertical_nav">
 			<ul id="js-menu" class="menu">
 				<h2>Quant DVR</h2>
 				<hr>
@@ -44,9 +128,9 @@
 						<span class="menu--label" key="main">Main</span>
 					</a>
 				</li>
-				<li class="menu--item menu--item__has_sub_menu">
+				<li class="menu--item  menu--item__has_sub_menu">
 					<label class="menu--link" title="Network Settings">
-					<span class="menu--label" key="net_s">Network Settings</span>
+						<span class="menu--label" key="net_s">Network Settings</span>
 					</label>
 
 					<ul class="sub_menu">
@@ -77,32 +161,32 @@
 						<span class="menu--label" key="record">Record Settings</span>
 					</a>
 				</li>
-			<li class="menu--item  menu--item__has_sub_menu">
+				<li class="menu--item menu--item__has_sub_menu menu--subitens__opened">
 					<label class="menu--link" title="Network Settings">
-					<span class="menu--label" key="cam_sett">Cameras Settings</span>
+						<span class="menu--label" key="cam_sett">Cameras Settings</span>
 					</label>
 					<ul class="sub_menu">
-						<li class="sub_menu--item">
-							<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1"> Camera 1</a>
+						<li class="sub_menu--item active">
+							<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1">Camera 1</a>
 						</li>
 						<li class="sub_menu--item">
 							<a href="camera2_settings.html" class="sub_menu--link sub_translate" key="cam2">Camera 2</a>
 						</li>
 					</ul>
-				</li>				
-			<li class="menu--item">
+				</li>
+				<li class="menu--item">
 					<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
 						<span class="menu--label" key="rtsp">RTSP Stream</span>
 					</a>
-			</li>
+				</li>
 				<li class="menu--item">
 					<a href="osd.html" class="menu--link" title="OSD">
 
 						<span class="menu--label" key="osd">OSD</span>
 					</a>
 				</li>
-				<li class="menu--item active">
+				<li class="menu--item">
 					<a href="cofdm.html" class="menu--link" title="Online Stream">
 
 						<span class="menu--label" key="cofdm">COFDM settings</span>
@@ -120,10 +204,10 @@
 						<span class="menu--label" key="stor">Storage</span>
 					</a>
 				</li>
-	
+
 				<li class="menu--item  menu--item__has_sub_menu">
 					<label class="menu--link" title="Network Settings">
-					<span class="menu--label" key="dow_file">Download Files</span>
+						<span class="menu--label" key="dow_file">Download Files</span>
 					</label>
 					<ul class="sub_menu">
 						<li class="sub_menu--item">
@@ -148,64 +232,5 @@
 				</li>
 			</ul>
 		</nav>
-	<div class="main">
-		<div class="padding-container"></div>
-
-			<div class="container">
-		<div>
-			<p class="content_cofdm" key="en_cofdm">Enable COFDM:</p>
-		</div>
-		<div id="toggles">
-			<label class="switch">
-				<input type="checkbox" id="en_cofdm">
-				<span></span> 
-			</label>
-		</div>
-	</div>
-		<div class="container">
-			<div>
-				<p class="content_cofdm" key="cofdm_cn1">Chanel 1:</p>
-			</div>
-			<div>
-				<select class="" disabled id="cofdm_cn1" name="cofdm-chanel1-sel">
-				</select>
-			</div>
-		</div>
-		<div class="container">
-			<div>
-				<p class="content_cofdm" key="cofdm_cn2">Chanel 2:</p>
-			</div>
-			<div>
-				<select class="" disabled id="cofdm_cn2" name="cofdm-chanel2-sel">
-				</select>
-			</div>
-		</div>
-		<div class="container">
-			<div>
-				<p class="content_cofdm" key="cofdm_cn3">Chanel 3:</p>
-			</div>
-			<div>
-				<select class="" disabled id="cofdm_cn3" name="cofdm-chanel3-sel">
-				</select>
-			</div>
-		</div>
-		<div class="container">
-			<div>
-				<p class="content_cofdm" key="cofdm_cn4">Chanel 4:</p>
-			</div>
-			<div>
-				<select class="" disabled id="cofdm_cn4" name="cofdm-chanel4-sel">
-				</select>
-			</div>
-		</div>
-	</div>
-
-	<div class="footer">
-		<div></div>
-		<div></div>
-		<div class="apply">
-			<button class="btn-control sub_translate" key="apply" id="cofdm_apply" type="">Apply</button>
-		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
