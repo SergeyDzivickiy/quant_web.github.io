@@ -1,42 +1,66 @@
 	
 
-	var progress_external = document.querySelectorAll("progress");
-	var external_storage_value = document.getElementById("external_storane").value;
-	var internal_storage_value = document.getElementById("internal_storage").value;
+var progress_external = document.querySelectorAll("progress");
+var external_storage_value = document.getElementById("external_storane").value;
+var internal_storage_value = document.getElementById("internal_storage").value;
 
-	if(external_storage_value>=30){
-		progress_external[0].style.setProperty("--c", "green");
-	}
+if(external_storage_value>=30){
+	progress_external[0].style.setProperty("--c", "green");
+}
 
-	if(external_storage_value>=50){
-		progress_external[0].style.setProperty("--c", "orange");
-	}
-	if(external_storage_value>=80){
-		progress_external[0].style.setProperty("--c", "red");
-	}
-	if(internal_storage_value>=30){
-		progress_external[1].style.setProperty("--c", "green");
-	}
+if(external_storage_value>=50){
+	progress_external[0].style.setProperty("--c", "orange");
+}
+if(external_storage_value>=80){
+	progress_external[0].style.setProperty("--c", "red");
+}
+if(internal_storage_value>=30){
+	progress_external[1].style.setProperty("--c", "green");
+}
 
-	if(internal_storage_value>=50){
-		progress_external[1].style.setProperty("--c", "orange");
-	}
-	if(internal_storage_value>=80){
-		progress_external[1].style.setProperty("--c", "red");
-	}
+if(internal_storage_value>=50){
+	progress_external[1].style.setProperty("--c", "orange");
+}
+if(internal_storage_value>=80){
+	progress_external[1].style.setProperty("--c", "red");
+}
 
 $('#quick_sd').on('click', function () {
+	var quick_form_sd = confirm("Format MicroSD?");
+	if (quick_form_sd) 
+	{
 		alert("Quick formating start");
+	}else{
+		alert("no format");
+	}
 });
 $('#full_sd').on('click', function () {
+	var full_form_sd = confirm("Format MicroSD?");
+	if (full_form_sd) 
+	{
 		alert("Full formating start");
+	}else{
+		alert("no format");
+	}
 });
 
 $('#quick_int').on('click', function () {
+	var quick_form_emmc = confirm("Format eMMC?");
+	if (quick_form_emmc) 
+	{
 		alert("Quick formating start");
+	}else{
+		alert("no format");
+	}
 });
 $('#full_int').on('click', function () {
+	var full_form_emmc = confirm("Format eMMC?");
+	if (full_form_emmc) 
+	{
 		alert("Full formating start");
+	}else{
+		alert("no format");
+	}
 });
 
 

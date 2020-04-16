@@ -3,19 +3,18 @@ setBatLevel(40);
 
 header_adapt();
 function header_adapt(){
-
 	var width = $('body').innerWidth();
-	if (width < 700) {
+	if (width < 800) {
 		$('.wrapper-simple-desc').removeClass('wrapper-simple-desc').addClass('wrapper-simple-mob');
-	}else if (width >700){
+	}else if (width >800){
 		$('.wrapper-simple-mob').removeClass('wrapper-simple-mob').addClass('wrapper-simple-desc');
 	}
 }
 $( window ).resize(function() {
 	var width = $('body').innerWidth();
-	if (width < 700) {
+	if (width < 800) {
 		$('.wrapper-simple-desc').removeClass('wrapper-simple-desc').addClass('wrapper-simple-mob');
-	}else if (width >700){
+	}else if (width >800){
 		$('.wrapper-simple-mob').removeClass('wrapper-simple-mob').addClass('wrapper-simple-desc');
 	}
 });

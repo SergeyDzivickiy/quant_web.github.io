@@ -6,12 +6,15 @@
 	<meta http-equiv="X-UA_compatible"content ="ei=edge">
 
 	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 	<script type="text/javascript" src="js/handler.js" defer></script>
+	
 	<script type="text/javascript" src="js/service-handle.js" defer=""></script>
 	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Quant DVR</title>
 
 </head>
@@ -135,6 +138,16 @@
 				<button id="reset" class="content_serv btn-service" key="res" type="submit" ><text class="sub_translate" key="reset">Reset settings </text><i class="fa fa-eraser" aria-hidden="true"></i> </button>
 			</div>
 		</div>
+	</div>
+	<div class="preloader">
+   <div class='cssload-loader'>
+  <div class='cssload-inner cssload-one'></div>
+  <div class='cssload-inner cssload-two'></div>
+  <div class='cssload-inner cssload-three'></div>
+    <p id="preload" style="text-align: center;  font-size: 28px; padding-top: 25%;"></p>
+</div>
+</div>
+</div>
 
 <nav class="vertical_nav">
 			<ul id="js-menu" class="menu">
@@ -179,6 +192,19 @@
 						<span class="menu--label" key="record">Record Settings</span>
 					</a>
 				</li>
+			<li class="menu--item  menu--item__has_sub_menu">
+					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="cam_sett">Cameras Settings</span>
+					</label>
+					<ul class="sub_menu">
+						<li class="sub_menu--item">
+							<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1"> Camera 1</a>
+						</li>
+						<li class="sub_menu--item">
+							<a href="camera2_settings.html" class="sub_menu--link sub_translate" key="cam2">Camera 2</a>
+						</li>
+					</ul>
+				</li>				
 			<li class="menu--item">
 					<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
