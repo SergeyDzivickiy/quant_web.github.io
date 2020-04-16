@@ -11,9 +11,7 @@ var ArrLang_Menu = {
 		'cust':'Customize',
 		'serv':'Service',
 		'dow_file':'Download Files',
-		'cofdm':'COFDM settings',
-		'cam_sett' : 'Cameras Settings'
-
+		'cofdm':'COFDM settings'
 	},
 	'ru':{
 		'main': 'Главная',
@@ -26,9 +24,7 @@ var ArrLang_Menu = {
 		'cust':'Кастомизация',
 		'serv':'Сервис',
 		'dow_file':'Загрузка файлов',
-		'cofdm':'Настройка COFDM',
-		'cam_sett' : 'Настройка камер'
-	
+		'cofdm':'Настройка COFDM'
 	}
 };
 //sub_translate
@@ -51,10 +47,7 @@ var Sub_Menu = {
 		'sync': 'Sync:',
 		'update': 'Update:',
 		'reboot': 'Reboot device',
-		'reset': 'Reset settings',
-		'cam1': 'Camera 1',
-		'cam2': 'Camera 2',
-		'voltage': 'Voltage:'							
+		'reset': 'Reset settings'				
 	},
 	'ru':{
 		'secur': 'Безопасность',
@@ -74,10 +67,7 @@ var Sub_Menu = {
 		'sync': 'Синх.',
 		'update': 'Обновить',
 		'reboot': 'Перезагрузка',
-		'reset': 'Сброс настр.',
-		'cam1': 'Камера 1',
-		'cam2': 'Камера 2',
-		'voltage': 'Напряжение:'						
+		'reset': 'Сброс настр.'			
 	}
 };
 
@@ -101,25 +91,21 @@ var ArrCust = {
 var ArrMain = {
 	'en':{
 		'header': 'Main',
-		'cam1': 'Camera 1',
-		'cam2': 'Camera 2',
+		'cam1': 'Camera 1:',
+		'cam2': 'Camera 2:',
 		'rec': 'Recording:',
 		'session': 'Session:',
 		'sess': 'Session #0',
-		'rtsp': 'RTSP Stream:',
-		'header_cam1':'Camera 1',
-		'header_cam2' : 'Camera 2'			
+		'rtsp': 'RTSP Stream:'
 	},
 	'ru':{
 		'header': 'Главная',
-		'cam1': 'Камера 1',
-		'cam2': 'Камера 2',
+		'cam1': 'Камера 1:',
+		'cam2': 'Камера 2:',
 		'rec': 'Запись:',
 		'session': 'Сессия:',
 		'sess': 'Сессия #0',
-		'rtsp': 'RTSP Поток:',
-		'header_cam1':'Камера 1',
-		'header_cam2' : 'Камера 2'			
+		'rtsp': 'RTSP Поток:'
 	}
 };
 
