@@ -54,7 +54,8 @@ var Sub_Menu = {
 		'reset': 'Reset settings',
 		'cam1': 'Camera 1',
 		'cam2': 'Camera 2',
-		'voltage': 'Voltage:'							
+		'voltage': 'Voltage:',
+		'utc': 'UTC Controller'							
 	},
 	'ru':{
 		'secur': 'Безопасность',
@@ -77,7 +78,8 @@ var Sub_Menu = {
 		'reset': 'Сброс настр.',
 		'cam1': 'Камера 1',
 		'cam2': 'Камера 2',
-		'voltage': 'Напряжение:'						
+		'voltage': 'Напряжение:',
+		'utc': 'Пульт управления UTC'							
 	}
 };
 
