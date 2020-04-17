@@ -62,26 +62,26 @@ $('#cam2_en').on('click', function () {
 
 $('#top_cam').on('click', function () {
 	alert("up");
-	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
-	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);
+	this.style.border="0.1px solid red";
+	setTimeout(() => { this.style.border = "0px solid white"; }, 50);
 });
 $('#left_cam').on('click', function () {
 	alert("left");
-	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
-	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+	this.style.border="0.1px solid red";
+	setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
 });
 $('#middle_cam').on('click', function () {
 	alert("select");
-	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
-	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+	this.style.border="0.1px solid red";
+	setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
 });
 $('#right_cam').on('click', function () {
 	alert("right");
-	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
-	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+	this.style.border="0.1px solid red";
+	setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
 });
 $('#down_cam').on('click', function () {
 	alert("down");
-	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
-	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+	this.style.border="0.1px solid red";
+	setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
 });

@@ -722,9 +722,8 @@ video{
 }
 
 .controller img{
-  position: relative;
-  margin-bottom: calc(-0.4% + (-2.4px));
-  margin-right: calc(-0.1% + (-2.7px));
+ vertical-align: middle;
+margin-left: -0.3em;
 }
 
 /*****************************CAMERAS SETTINGS FIELD******************/
