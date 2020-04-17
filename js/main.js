@@ -3,15 +3,13 @@ video_adapt();
 function video_adapt(){
 	var width = $('body').innerWidth();
 	if(width<1030){
-		document.getElementById("mob_cam1").style.display = "block";
-		document.getElementById("mob_cam2").style.display = "block";
-		document.getElementById("desc_cam1").style.display = "none";
-		document.getElementById("desc_cam2").style.display = "none";
+		document.getElementById("mob_cam1").style.display = "grid";
+		document.getElementById("mob_cam2").style.display = "grid";
+		document.getElementById("container_main").style.display = "none";
 	}else{
 		document.getElementById("mob_cam1").style.display = "none";
 		document.getElementById("mob_cam2").style.display = "none";
-		document.getElementById("desc_cam1").style.display = "block";
-		document.getElementById("desc_cam2").style.display = "block";
+		document.getElementById("container_main").style.display = "grid";
 	}
 
 	if (width > 700 && width < 1030) {
@@ -24,15 +22,13 @@ $( window ).resize(function() {
 	var width = $('body').innerWidth();
 	
 	if(width<1030){
-		document.getElementById("mob_cam1").style.display = "block";
-		document.getElementById("mob_cam2").style.display = "block";
-		document.getElementById("desc_cam1").style.display = "none";
-		document.getElementById("desc_cam2").style.display = "none";
+		document.getElementById("mob_cam1").style.display = "grid";
+		document.getElementById("mob_cam2").style.display = "grid";
+		document.getElementById("container_main").style.display = "none";
 	}else{
 		document.getElementById("mob_cam1").style.display = "none";
 		document.getElementById("mob_cam2").style.display = "none";
-		document.getElementById("desc_cam1").style.display = "block";
-		document.getElementById("desc_cam2").style.display = "block";
+		document.getElementById("container_main").style.display = "grid";
 	}
 	if (width > 700 && width < 1030) {
 		$('.container-video').removeClass('container-video').addClass('container-video-ipad');

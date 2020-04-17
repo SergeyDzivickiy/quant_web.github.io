@@ -19,49 +19,69 @@ function video_adapt(){
 		$('.container-settings').removeClass('container-settings').addClass('container-settings-mob');
 	}else{
 		$('.container-settings-mob').removeClass('container-settings-mob').addClass('container-settings');
-	}}
+	}	if (width > 700 && width < 1050) {
+		$('.cameras-settings').removeClass('cameras-settings').addClass('cameras-settings-ipad');
+	}else{
+		$('.cameras-settings-ipad').removeClass('cameras-settings-ipad').addClass('cameras-settings');
+	}
+}
 
-	$( window ).resize(function() {
-		var width = $('body').innerWidth();
-		if (width < 1400) {	
-			$('.container-settings').removeClass('container-settings').addClass('container-settings-mob');
-		}else{
-			$('.container-settings-mob').removeClass('container-settings-mob').addClass('container-settings');
-		}
-	});
+$( window ).resize(function() {
+	var width = $('body').innerWidth();
+	if (width < 1400) {	
+		$('.container-settings').removeClass('container-settings').addClass('container-settings-mob');
+	}else{
+		$('.container-settings-mob').removeClass('container-settings-mob').addClass('container-settings');
+	}
+	if (width > 700 && width < 1050) {
+		$('.cameras-settings').removeClass('cameras-settings').addClass('cameras-settings-ipad');
+	}else{
+		$('.cameras-settings-ipad').removeClass('cameras-settings-ipad').addClass('cameras-settings');
+	}
+});
 
-	$('#cam2_en').on('click', function () {
-		var cam2_field = document.getElementById("cam2");
-		var cam2_controler = document.getElementById("controler");
-		var no_vid_cam2 = document.getElementById("cam2_no_vid");
-		if ( $(this).is(':checked') ) {
-			camera_enable = 1;
-		} else {
-			camera_enable = 0;
-		}
-		if(camera_enable == 0){
-			cam2_field.hidden = true;
-			cam2_controler.style.display = "none";
-			no_vid_cam2.hidden = false;
-		}else{
-			cam2_field.hidden = false;
-			cam2_controler.style.display = "block";
-			no_vid_cam2.hidden = true;
-		}
-	});
+$('#cam2_en').on('click', function () {
+	var cam2_field = document.getElementById("cam2");
+	var cam2_controler = document.getElementById("controler");
+	var no_vid_cam2 = document.getElementById("cam2_no_vid");
+	if ( $(this).is(':checked') ) {
+		camera_enable = 1;
+	} else {
+		camera_enable = 0;
+	}
+	if(camera_enable == 0){
+		cam2_field.hidden = true;
+		cam2_controler.style.display = "none";
+		no_vid_cam2.hidden = false;
+	}else{
+		cam2_field.hidden = false;
+		cam2_controler.style.display = "block";
+		no_vid_cam2.hidden = true;
+	}
+});
 
-	$('#top_cam2').on('click', function () {
-		alert("up");
-	});
-	$('#middle_left_cam2').on('click', function () {
-		alert("left");
-	});
-	$('#middle_cent_cam2').on('click', function () {
-		alert("select");
-	});
-	$('#middle_right_cam2').on('click', function () {
-		alert("right");
-	});
-	$('#bot_cam2').on('click', function () {
-		alert("down");
-	});
+$('#top_cam').on('click', function () {
+	alert("up");
+	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
+	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);
+});
+$('#left_cam').on('click', function () {
+	alert("left");
+	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
+	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+});
+$('#middle_cam').on('click', function () {
+	alert("select");
+	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
+	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+});
+$('#right_cam').on('click', function () {
+	alert("right");
+	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
+	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+});
+$('#down_cam').on('click', function () {
+	alert("down");
+	// this.style.border="0.1px solid rgba(100, 100, 100, 0.5)";
+	// setTimeout(() => { this.style.border = "0px solid white"; }, 50);	
+});
