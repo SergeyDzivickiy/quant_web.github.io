@@ -6,12 +6,15 @@
 	<meta http-equiv="X-UA_compatible"content ="ei=edge">
 	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
 	
+	<link rel="stylesheet" type="text/css" href="css/vertical-responsive-menu.min.css">
+	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script type="text/javascript" src="js/handler.js" defer></script>
 	<script type="text/javascript" src="js/record_handler.js" defer></script>
 	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer=""></script>
-	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
 
 
 	<title>Quant DVR</title>
@@ -192,7 +195,7 @@
 		<div>
 			<p class="content_rec" key="cam2">Camera 2</p>
 		</div>
-			<div id="toggles">
+		<div id="toggles">
 			<label class="switch">
 				<input type="checkbox" id="en_cam2" checked>
 				<span></span> 
@@ -207,120 +210,120 @@
 		</div>
 	</div>
 
-<nav class="vertical_nav">
-			<ul id="js-menu" class="menu">
-				<h2>Quant DVR</h2>
-				<hr>
-				<li class="menu--item">
-					<a id="main" href="index.html" class="menu--link" title="Main">
-
-						<span class="menu--label" key="main">Main</span>
-					</a>
-				</li>
-				<li class="menu--item menu--item__has_sub_menu">
-					<label class="menu--link" title="Network Settings">
-					<span class="menu--label" key="net_s">Network Settings</span>
-					</label>
-
-					<ul class="sub_menu">
-						<li class="sub_menu--item">
-							<a href="wlan.html" class="sub_menu--link">WLAN</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="proxy.html" class="sub_menu--link">Proxy</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="web.html" class="sub_menu--link">Web</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="vpn.html" class="sub_menu--link">VPN</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
-						</li>	
-					</ul>
-				</li>
-
-				<li class="menu--item active">
-					<a href="record.html" class="menu--link" title="Record">
-
-						<span class="menu--label" key="record">Record Settings</span>
-					</a>
-				</li>
-			<li class="menu--item  menu--item__has_sub_menu">
-					<label class="menu--link" title="Network Settings">
-					<span class="menu--label" key="cam_sett">Cameras Settings</span>
-					</label>
-					<ul class="sub_menu">
-						<li class="sub_menu--item">
-							<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1"> Camera 1</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="camera2_settings.html" class="sub_menu--link sub_translate" key="cam2">Camera 2</a>
-						</li>
-					</ul>
-				</li>				
+	<nav class="vertical_nav">
+		<ul id="js-menu" class="menu">
+			<h2>Quant DVR</h2>
+			<hr>
 			<li class="menu--item">
-					<a href="rtsp_stream.html" class="menu--link" title="Stream">
+				<a id="main" href="index.html" class="menu--link" title="Main">
 
-						<span class="menu--label" key="rtsp">RTSP Stream</span>
-					</a>
+					<span class="menu--label" key="main">Main</span>
+				</a>
 			</li>
-				<li class="menu--item">
-					<a href="osd.html" class="menu--link" title="OSD">
+			<li class="menu--item menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="net_s">Network Settings</span>
+				</label>
 
-						<span class="menu--label" key="osd">OSD</span>
-					</a>
-				</li>
-				<li class="menu--item">
-					<a href="cofdm.html" class="menu--link" title="Online Stream">
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="wlan.html" class="sub_menu--link">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link">VPN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
+					</li>	
+				</ul>
+			</li>
 
-						<span class="menu--label" key="cofdm">COFDM settings</span>
-					</a>
-				</li>
-				<li class="menu--item">
-					<a href="sheduler.html" class="menu--link" title="Delayed Start">
+			<li class="menu--item active">
+				<a href="record.html" class="menu--link" title="Record">
 
-						<span class="menu--label" key="shed">Sheduler</span>
-					</a>
-				</li>
-				<li class="menu--item">
-					<a href="storage.html" class="menu--link" title="Storage">
+					<span class="menu--label" key="record">Record Settings</span>
+				</a>
+			</li>
+			<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="cam_sett">Cameras Settings</span>
+				</label>
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="camera1_settings.html" class="sub_menu--link sub_translate" key="cam1"> Camera 1</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="camera2_settings.html" class="sub_menu--link sub_translate" key="cam2">Camera 2</a>
+					</li>
+				</ul>
+			</li>				
+			<li class="menu--item">
+				<a href="rtsp_stream.html" class="menu--link" title="Stream">
 
-						<span class="menu--label" key="stor">Storage</span>
-					</a>
-				</li>
-	
-				<li class="menu--item  menu--item__has_sub_menu">
-					<label class="menu--link" title="Network Settings">
+					<span class="menu--label" key="rtsp">RTSP Stream</span>
+				</a>
+			</li>
+			<li class="menu--item">
+				<a href="osd.html" class="menu--link" title="OSD">
+
+					<span class="menu--label" key="osd">OSD</span>
+				</a>
+			</li>
+			<li class="menu--item">
+				<a href="cofdm.html" class="menu--link" title="Online Stream">
+
+					<span class="menu--label" key="cofdm">COFDM settings</span>
+				</a>
+			</li>
+			<li class="menu--item">
+				<a href="sheduler.html" class="menu--link" title="Delayed Start">
+
+					<span class="menu--label" key="shed">Sheduler</span>
+				</a>
+			</li>
+			<li class="menu--item">
+				<a href="storage.html" class="menu--link" title="Storage">
+
+					<span class="menu--label" key="stor">Storage</span>
+				</a>
+			</li>
+			
+			<li class="menu--item  menu--item__has_sub_menu">
+				<label class="menu--link" title="Network Settings">
 					<span class="menu--label" key="dow_file">Download Files</span>
-					</label>
-					<ul class="sub_menu">
-						<li class="sub_menu--item">
-							<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="download_int.html" class="sub_menu--link">eMMC</a>
-						</li>
-					</ul>
-				</li>
-				<li class="menu--item">
-					<a href="service.html" class="menu--link" title="Device Info">
+				</label>
+				<ul class="sub_menu">
+					<li class="sub_menu--item">
+						<a href="download_ext.html" class="sub_menu--link">MicroSD</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="download_int.html" class="sub_menu--link">eMMC</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu--item">
+				<a href="service.html" class="menu--link" title="Device Info">
 
-						<span class="menu--label" key="serv">Service</span>
-					</a>
-				</li>
-				<li class="menu--item">
-					<a href="customize.html" class="menu--link" title="Service">
+					<span class="menu--label" key="serv">Service</span>
+				</a>
+			</li>
+			<li class="menu--item">
+				<a href="customize.html" class="menu--link" title="Service">
 
-						<span class="menu--label" key="cust">Customize</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+					<span class="menu--label" key="cust">Customize</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
 </div>
 </body>
 </html>

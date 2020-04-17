@@ -6,15 +6,13 @@
 	<meta http-equiv="X-UA_compatible"content ="ei=edge">
 	
 	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
-	
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/vertical-responsive-menu.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
 	<script type="text/javascript" src="js/handler.js" defer></script>
 	<script type="text/javascript" src="js/cam2_handler.js" defer></script>
 	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer></script>
-	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Quant DVR</title>
 
 </head>
@@ -65,61 +63,29 @@
 
 					<img class="no-video" id="cam2_no_vid" src="img/no-video.png" alt="no-video" hidden>
 
-					<p style="padding-left: 45%;" id="set_cam2" class="content_main" key="cam2">Camera 2</p>
+					<p style="text-align: center;" id="set_cam2" class="content_main" key="cam2">Camera 2</p>
 				</div>
-
-				<div class="contr" id="controler">
-
-					<div class="cameras-controler-top" id="cam1_contr_top">
-						<!-- 		<p>Controler</p> -->
-						<button class="top_controler" id="top_cam2"></button>
+				<div class="canvas-field">
+					<div class="controller">
+						<img src="img/controller/image_part_001.png" alt="">
+						<img id="top_cam" src="img/controller/image_part_002.png" alt="">
+						<img src="img/controller/image_part_003.png" alt="">
 					</div>
-
-					<div class="cameras-controler-middle" id="cam1_contr_mid">
-						<div>
-							<button class="middle_left_controler" id="middle_left_cam2"></button>
-
-							<button class="middle_cent_controler" id="middle_cent_cam2"></button>
-
-							<button class="middle_right_controler" id="middle_right_cam2"></button>
-						</div>
-					</div>	
-					<div class="cameras-controler-bot" id="cam1_contr_bot">
-						<button class="bot_controler" id="bot_cam2"></button>
+					<div class="controller">
+						<img id="left_cam" src="img/controller/image_part_004.png" alt="">
+						<img id="middle_cam" src="img/controller/image_part_005.png" alt="">
+						<img id="right_cam" src="img/controller/image_part_006.png" alt="">
 					</div>
-				</div>
+					<div class="controller">
+						<img src="img/controller/image_part_007.png" alt="">
+						<img id="down_cam" src="img/controller/image_part_008.png" alt="">
+						<img src="img/controller/image_part_009.png" alt="">
+					</div>
+				</div> 
+				
 			</div>
 		</div>
 
-
-<!-- 		<div class="cameras-settings" id="camera1_sett">
-			<div>
-				<video class="video-settings" id="cam1" controls="controls" preload="none">
-					<source src="media/test_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					</video>
-
-					<img class="no-video" id="cam1_no_vid" src="img/no-video.png" alt="no-video" hidden>
-					<p style="padding-left: 8%;" id="set_cam1" class="content_main" key="cam1">Camera 1</p>
-				</div>
-			</div>
-			<div class="cameras-controler-top" id="cam1_contr_top">
-						<p>Controler</p>
-				<button class="top_controler" id="top_cam1"></button>
-			</div>
-
-			<div class="cameras-controler-middle" id="cam1_contr_mid">
-				<div>
-					<button class="middle_left_controler" id="middle_left_cam1"></button>
-
-					<button class="middle_cent_controler" id="middle_cent_cam1"></button>
-
-					<button class="middle_right_controler" id="middle_right_cam1"></button>
-				</div>
-			</div>	
-			<div class="cameras-controler-bot" id="cam1_contr_bot">
-				<button class="bot_controler" id="bot_cam1"></button>
-			</div>
-		</div> -->
 		<nav class="vertical_nav">
 			<ul id="js-menu" class="menu">
 				<h2>Quant DVR</h2>

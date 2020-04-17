@@ -6,13 +6,13 @@
 	<meta http-equiv="X-UA_compatible"content ="ei=edge">
 	
 	<script type="text/javascript" src="js/cookies_handler.js" defer></script>
-
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/vertical-responsive-menu.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script type="text/javascript" src="js/handler.js" defer></script>
 	<script type="text/javascript" src="js/main.js" defer></script>
 	<script type="text/javascript" src="js/vertical-responsive-menu.min.js" defer></script>
-	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 
 
 	<title>Quant DVR</title>
@@ -47,7 +47,7 @@
 				</video>
 
 				<img class="no-video" id="cam1_no_vid" src="img/no-video.png" alt="no-video" hidden>
-				<p style="padding-left: 42%; display: none;" id="mob_cam1" class="content_main" key="cam1">Camera 1</p>
+				<p style=" display: none;" id="mob_cam1" class="content_main" key="cam1">Camera 1</p>
 			</div>
 
 			<div>
@@ -55,22 +55,16 @@
 					<source src="media/test_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 					</video> 
 				<img class="no-video" id="cam2_no_vid" src="img/no-video.png" alt="no-video" hidden>
-				<p style="padding-left: 42%; display: none;" id="mob_cam2" class="content_main" key="cam2">Camera 2</p>
+				<p style=" display: none;" id="mob_cam2" class="content_main" key="cam2">Camera 2</p>
 			</div>
 			</div>
 
-			<div class="container-main">
+			<div class="container-main" id="container_main">
 				<div>
-
+					<p class="content_main" key="cam1">Camera 1</p>
 				</div>
 				<div>
-					<p id="desc_cam1" class="content_main" key="cam1">Camera 1</p>
-				</div>
-				<div>
-
-				</div>
-				<div>
-					<p id="desc_cam2" class="content_main" key="cam2">Camera 2</p>
+					<p class="content_main" key="cam2">Camera 2</p>
 				</div>
 			</div>
 			<div class="container">
