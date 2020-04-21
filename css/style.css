@@ -718,12 +718,12 @@ video{
 
 .canvas-field{
   text-align: center;
-  padding-top: calc(100vh/25);
+  padding-top: calc(100vh/25 - 50px);
 }
 
 .controller img{
  vertical-align: middle;
-margin-left: -0.3em;
+margin-left: -0.246em;
 }
 
 /*****************************CAMERAS SETTINGS FIELD******************/
