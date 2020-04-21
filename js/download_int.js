@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		sleep(3000).then(function() {
 		$('.preloader').removeClass('activev');
 	});
-		//ws.send("0x74");
+		ws.send("0x74");
 	});
 
 }, false);

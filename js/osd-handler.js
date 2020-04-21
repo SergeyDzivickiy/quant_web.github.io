@@ -331,7 +331,7 @@ function new_ws(urlpath, protocol)
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	var ws = new_ws("ws://10.0.1.27:7681", "lws-minimal");
+	var ws = new_ws(get_appropriate_ws_url(""), "lws-minimal");
 	ws.binaryType = "blob";
 	try {
 		ws.onopen = function() {

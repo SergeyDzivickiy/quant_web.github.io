@@ -34,9 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 
 		ws.onmessage =function got_packet(msg) {
-			//	console.log("Data from Server: "  + msg.data);
+			
 			var sizeInBytes = (msg.data).size;
-				//var reader = new FileReader();
 				console.log("Contains", sizeInBytes, "bytes.");
 				download(msg.data);
 			};
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		
 
-		$("#download_mp4_ext_1").click(function () {
+		$("#download_mp4_1").click(function () {
 			$('.preloader').addClass('activev');
 			ws.send("0x74");
 		});
@@ -86,9 +85,9 @@ function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-sleep(1000*5).then(function() {
-	$('.preloader').removeClass('activev');
-});
+// sleep(1000*5).then(function() {
+// 	$('.preloader').removeClass('activev');
+// });
 
 
 $('p').each(function (index, value){

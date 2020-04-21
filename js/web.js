@@ -5,7 +5,15 @@ $('#web_apply').on('click', function () {
 });
 
 var status_connection_web = document.getElementById("status_web");
-status_connection_web.innerHTML = "No connection";
+var socket_connection = 0;
+
+
+if(socket_connection == 1){
+	status_connection_web.innerHTML = "Connected";
+}else{
+	status_connection_web.innerHTML = "No connection";
+}
+
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
@@ -36,13 +44,13 @@ function new_ws(urlpath, protocol)
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	var ws = new_ws("ws://10.0.1.27:7681", "lws-minimal");
+	var ws = new_ws(get_appropriate_ws_url(""), "lws-minimal");
 	ws.binaryType = "blob";
 	try {
 		ws.onopen = function() {
 			console.log("Connected");
-			status_connection_web.innerHTML = "Connected";
 			console.log(ws);
+			status_connection_web.innerHTML = "Connected";
 		};
 
 		ws.onmessage =function got_packet(msg) {
