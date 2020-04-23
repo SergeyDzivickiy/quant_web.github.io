@@ -1,21 +1,4 @@
-for (var i = 3; i<=12; i+=0.5) {
-	if((i%1)==0)
-	{
-		var newOption = new Option (i+".0", i+".0");
-	}else{
-		var newOption = new Option (i, i);
-	}
-	cam_volt.append(newOption);
-}
 
-
-$('#en_cam1').on('click', function () {
-
-});
-
-$('#en_cam2').on('click', function () {
-
-});
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
@@ -46,7 +29,7 @@ function new_ws(urlpath, protocol)
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	var ws = new_ws(get_appropriate_ws_url(""), "lws-minimal");
+	var ws = new_ws("ws://10.0.1.27:7681", "lws-minimal");
 	ws.binaryType = "blob";
 	try {
 		ws.onopen = function() {
@@ -57,6 +40,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		ws.onmessage =function got_packet(msg) {
 			console.log("Data from Server: "  + msg.data);
 			var sizeInBytes = (msg.data).size;
+				let serv_data = new Array();
+			serv_data.push(msg.data);
+			console.log("SERV DATA: " + serv_data);
+
+			 // $('body').find('input, select').each( function(){
+			 // 	for (var i = 0; i <= serv_data.length; i++) {
+			 // 		$(this).value =  serv_data[i];
+			 // 		console.log("value = " + serv_data[i]);   
+			 // 	}
+	   //      console.log("value = " + (this).value);             
+	   //  });
 		};
 		
 		ws.onclose = function(){
@@ -65,7 +59,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	} catch(exception) {
 		alert("<p>Error " + exception);  
 	}
-	
+
+	$('#rec_send').on('click', function () {
+
+		let rec_data = new Array();
+		$('div select').each(function() {
+			console.log($(this).val());
+			rec_data.push($(this).val());
+		});
+
+		$('div input').each(function() {
+			if ($(this).is(':checked')){
+				console.log(1);
+				rec_data.push(1);
+			}else{
+				console.log(0);
+				rec_data.push(0);
+			}
+		// console.log($(this).val());
+	});
+		console.log(rec_data);
+		ws.send(rec_data);
+	});
 
 }, false);
 //*******************WEB SOCKET***********************************//

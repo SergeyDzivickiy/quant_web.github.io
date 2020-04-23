@@ -1,8 +1,4 @@
 
-$('#wlan_apply').on('click', function () {
-	alert("test");
-});
-
 $('body').on('click', '.password-control', function(){
 
 	if ($('#password_input').attr('type') == 'password'){
@@ -17,6 +13,8 @@ $('body').on('click', '.password-control', function(){
 	
 	return false;
 });
+
+
 
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
@@ -66,7 +64,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	} catch(exception) {
 		alert("<p>Error " + exception);  
 	}
-	
+
+	$('#wlan_apply').on('click', function () {
+			let wlan_data = new Array();
+		$('div input').each(function() {
+			console.log($(this).val());
+			wlan_data.push(ascii_to_hex(($(this).val())));
+		});
+		console.log(wlan_data);
+	});
 
 }, false);
+
+function ascii_to_hex(str)
+  {
+	var arr1 = [];
+	for (var n = 0, l = str.length; n < l; n ++) 
+     {
+		var hex = Number(str.charCodeAt(n)).toString(16);
+		arr1.push(hex);
+	 }
+	return arr1.join('');
+   }
 //*******************WEB SOCKET***********************************//

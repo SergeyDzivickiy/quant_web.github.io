@@ -12,6 +12,7 @@ var ArrLang_Menu = {
 		'serv':'Service',
 		'dow_file':'Download Files',
 		'cofdm':'COFDM settings',
+		'gsm':'GSM/GPS settings',
 		'cam_sett' : 'Cameras Settings'
 
 	},
@@ -27,6 +28,7 @@ var ArrLang_Menu = {
 		'serv':'Сервис',
 		'dow_file':'Загрузка файлов',
 		'cofdm':'Настройка COFDM',
+		'gsm':'Настройка GSM/GPS',
 		'cam_sett' : 'Настройка камер'
 	
 	}
@@ -36,6 +38,9 @@ var Sub_Menu = {
 'en':{
 		'secur': 'Security',
 		'temp': 'CPU temp:',
+		'gsm': 'GSM Control:',
+		'gps': 'GPS:',
+		'header': 'GSM/GPS Settings',
 		'load': 'CPU load:',
 		'tcp_stat': 'Status Ethernet connection',
 		'tcp': 'TCP Connection:',
@@ -60,6 +65,9 @@ var Sub_Menu = {
 	'ru':{
 		'secur': 'Безопасность',
 		'temp': 'CPU темп:',
+		'header': 'Настройка GSM/GPS',
+		'gsm': 'GSM Управление:',
+		'gps': 'GPS:',
 		'load': 'CPU загр:',
 		'tcp_stat': 'Состояние Ethernet подключения',
 		'tcp': 'TCP Подключение:',
@@ -243,7 +251,7 @@ var ArrNet = {
 		'tcp': 'TCP Port:',
 		'host': 'Proxy Host:',
 		'port': 'Proxy Port:',
-		'vpn_addr': 'VPN Adress:',
+		'vpn_addr': 'VPN Address:',
 		'login_vpn': 'VPN Login:',
 		'vpn_pass': 'VPN Password:',
 		'http': 'HTTP Port:'
