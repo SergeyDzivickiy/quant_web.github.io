@@ -112,6 +112,17 @@ input[type="time"] {
   padding:0;
   outline:none;
 }
+#map{
+ width: 100%;
+ height: calc(100vh/2 - 50px);
+ background-color: grey; 
+}
+#current_location{
+  text-decoration: none;
+  color: #ff0000;
+  background-color: #313131;
+  font-size: 15px;
+}
 
 /****************************PAGE SETTINGS*****************************/
 
@@ -723,7 +734,7 @@ video{
 
 .controller img{
  vertical-align: middle;
-margin-left: -0.246em;
+ margin-left: -0.246em;
 }
 
 /*****************************CAMERAS SETTINGS FIELD******************/
