@@ -42,7 +42,7 @@ var Sub_Menu = {
 		'gps': 'GPS:',
 		'header': 'GSM/GPS Settings',
 		'load': 'CPU load:',
-		'tcp_stat': 'Status Ethernet connection',
+		'tcp_stat': 'Status TCP/IP connection',
 		'tcp': 'TCP Connection:',
 		'proxy_stat': 'Status Proxy connection',
 		'proxy': 'Proxy Connection:',
@@ -60,7 +60,8 @@ var Sub_Menu = {
 		'cam1': 'Camera 1',
 		'cam2': 'Camera 2',
 		'voltage': 'Voltage:',
-		'utc': 'UTC Controller'							
+		'utc': 'UTC Controller',
+		'ethernet' : 'TCP/IP'							
 	},
 	'ru':{
 		'secur': 'Безопасность',
@@ -69,7 +70,7 @@ var Sub_Menu = {
 		'gsm': 'GSM Управление:',
 		'gps': 'GPS:',
 		'load': 'CPU загр:',
-		'tcp_stat': 'Состояние Ethernet подключения',
+		'tcp_stat': 'Состояние TCP/IP подключения',
 		'tcp': 'TCP Подключение:',
 		'proxy_stat': 'Состояние Proxy подключения',
 		'proxy': 'Proxy Подключение:',
@@ -87,7 +88,8 @@ var Sub_Menu = {
 		'cam1': 'Камера 1',
 		'cam2': 'Камера 2',
 		'voltage': 'Напряжение:',
-		'utc': 'Пульт управления UTC'							
+		'utc': 'Пульт управления UTC',
+		'ethernet' : 'TCP/IP'								
 	}
 };
 
@@ -228,7 +230,7 @@ var ArrNet = {
 	'en':{
 		'header': 'Network Settings',
 		'header_wlan': 'WLAN Settings',
-		'header_ethernet': 'Ethernet Settings',
+		'header_ethernet': 'TCP/IP Settings',
 		'header_vpn': 'VPN Settings',
 		'header_proxy': 'Proxy Settings',
 		'header_web': 'Web Settings',
@@ -259,7 +261,7 @@ var ArrNet = {
 	'ru':{
 		'header': 'Сетевые Настройки',
 		'header_wlan': 'Настройка WLAN',
-		'header_ethernet': 'Настройка Ethernet ',
+		'header_ethernet': 'Настройка TCP/IP ',
 		'header_vpn': 'Настройка VPN',
 		'header_proxy': 'Настройка Proxy',
 		'header_web': 'Настройка Web',

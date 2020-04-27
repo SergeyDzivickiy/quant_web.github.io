@@ -93,7 +93,7 @@
 			<p class="content_net" key="band">Band:</p>
 		</div>
 		<div>
-			<select name="band-sel" id="band-sel">
+			<select name="band-sel" id="band_sel">
 				<option value="0">2.4 GHz</option>
 				<option value="1">5.0 GHz</option>
 			</select>
@@ -106,7 +106,7 @@
 			<p class="content_net" key="mode">Mode:</p>
 		</div>
 		<div>
-			<select name="mode-sel" id="mode-sel">
+			<select name="mode-sel" id="mode_sel">
 				<option value="0">AP</option>
 				<option value="1">STA</option>
 			</select>
@@ -119,10 +119,10 @@
 			<p class="content_net" key="w_mode">Work mode:</p>
 		</div>
 		<div>
-			<select name="work-sel" id="work-sel">
-				<option class="content_net" key="alw" value="always">Always</option>
-				<option class="content_net" key="1min" value="1min">1 min</option>
-				<option class="content_net" key="5min" value="5min">5 min</option>
+			<select name="work-sel" id="work_sel">
+				<option class="content_net" key="alw" value="0">Always</option>
+				<option class="content_net" key="1min" value="1">1 min</option>
+				<option class="content_net" key="5min" value="2">5 min</option>
 			</select>
 		</div>
 	</div>
@@ -150,29 +150,27 @@
 					<label class="menu--link" title="Network Settings">
 					<span class="menu--label" key="net_s">Network Settings</span>
 					</label>
-
-					<ul class="sub_menu">
-						<li class="sub_menu--item active">
-							<a href="wlan.html" class="sub_menu--link">WLAN</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="ethernet.html" class="sub_menu--link">Ethernet</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="proxy.html" class="sub_menu--link">Proxy</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="web.html" class="sub_menu--link">Web</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="vpn.html" class="sub_menu--link">VPN</a>
-						</li>
-						<li class="sub_menu--item">
-							<a href="security.html" class="sub_menu--link sub_translate" key="secur">Security</a>
-						</li>	
-					</ul>
+				<ul class="sub_menu">
+					<li class="sub_menu--item active">
+						<a href="wlan.html" class="sub_menu--link sub_translate" key="">WLAN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="ethernet.html" class="sub_menu--link sub_translate"  key="ethernet">Ethernet</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="proxy.html" class="sub_menu--link sub_translate"  key="">Proxy</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="web.html" class="sub_menu--link sub_translate"  key="">Web</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="vpn.html" class="sub_menu--link sub_translate"  key="">VPN</a>
+					</li>
+					<li class="sub_menu--item">
+						<a href="security.html" class="sub_menu--link sub_translate sub_translate" key="secur">Security</a>
+					</li>	
+				</ul>
 				</li>
-
 				<li class="menu--item">
 					<a href="record.html" class="menu--link" title="Record Settings">
 
