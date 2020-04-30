@@ -498,7 +498,7 @@ video{
 }
 .container-storage{
   display: grid;
-  min-width: 100%;
+  min-width: 95%;
   margin-left: 5%;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(50px, auto);
