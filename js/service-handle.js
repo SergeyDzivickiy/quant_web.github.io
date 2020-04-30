@@ -36,14 +36,14 @@ $('#reset').on('click', function () {
 	
 	if (is_reset) 
 	{
-		alert("reset");
+		// alert("reset");
 		document.getElementById("preload").innerHTML = "Reset settings...";
 		$('.preloader').addClass('activev');
 		sleep(5000).then(function() {
 			$('.preloader').removeClass('activev');
 		});
 	}else{
-		alert("no reset");
+		// alert("no reset");
 	}
 });
 
@@ -52,14 +52,14 @@ $('#reboot').on('click', function () {
 	var is_reboot = confirm("Reboot device?");
 	if (is_reboot) 
 	{
-		alert("reboot");
+		// alert("reboot");
 		document.getElementById("preload").innerHTML = "Reboot device...";
 		$('.preloader').addClass('activev');
 		sleep(5000).then(function() {
 			$('.preloader').removeClass('activev');
 		});
 	}else{
-		alert("no reboot");
+		// alert("no reboot");
 	}
 });
 

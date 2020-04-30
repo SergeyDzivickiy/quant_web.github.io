@@ -66,8 +66,6 @@ $('body').on('click', '.password-control', function(){
 	return false;
 });
 
-
-
 //*******************WEB SOCKET***********************************//
 function get_appropriate_ws_url(extra_url)
 {
@@ -214,7 +212,7 @@ function parse_Cstruct_to_object(struct)
 	}
 
 
-	console.log(wlan_data);
+	console.log(packet_server);
 
 }
 
